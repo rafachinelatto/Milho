@@ -336,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = R76485F3LM;
+				DEVELOPMENT_TEAM = J3D6H27WWS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";
@@ -366,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = R76485F3LM;
+				DEVELOPMENT_TEAM = J3D6H27WWS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";

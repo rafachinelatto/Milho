@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ImageTypeSelection: View {
     @StateObject var homeData = ImageTypeViewModel()
+    @ObservedObject var segmentation = ImageSegmentation()
+    @ObservedObject var imageQuality = FaceImageQuality()
+    
+    @State var imageSelected: UIImage?
     @State var showImagePicker: Bool = false
     @State var showActionSheet: Bool = false
     @State var sourceType: Int = 0
@@ -16,14 +20,33 @@ struct ImageTypeSelection: View {
     var body: some View {
         ZStack {
             VStack {
-                if !homeData.allImages.isEmpty && homeData.mainView != nil {
-                    Image(uiImage: homeData.mainView.image)
+                
+                
+//                if !homeData.allImages.isEmpty && homeData.mainView != nil {
+//                    Image(uiImage: homeData.mainView.image)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: UIScreen.main.bounds.width)
+//                    
+//                    Text("Tem certeza de que deseja analisar esta foto?")
+//                        .padding()
+//                }
+                
+                if let image = imageSelected {
+                    Image(uiImage: image)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: UIScreen.main.bounds.width)
+                        .scaledToFit()
                     
-                    Text("Tem certeza de que deseja analisar esta foto?")
-                        .padding()
+                    Button("Segmentar imagem") {
+                        segmentation.inputImage = image
+                        segmentation.segmentImage()
+                    }
+                    
+                    if let outputImage = segmentation.outputImage {
+                        Image(uiImage: outputImage)
+                            .resizable()
+                            .scaledToFit()
+                    }
                 }
                 
                 else if homeData.imageData.count == 0 {
@@ -43,15 +66,15 @@ struct ImageTypeSelection: View {
                                 ActionSheet.Button.cancel()
                             ])
                         })
-                   }
+                }
                 
                 else {
                     // Loading View...
                     ProgressView()
-                   }
                 }
-                  if showImagePicker {
-                 ImagePicker(isVisible: $showImagePicker, sourceType: sourceType)
+            }
+            if showImagePicker {
+                ImagePicker(selectedImage: $imageSelected, isVisible: $showImagePicker, sourceType: sourceType)
             }
         }
     }

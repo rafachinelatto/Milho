@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let image = UIImage(named: "teste")!
+    let image = UIImage(named: "Teste")!
     @ObservedObject var segmentation = ImageSegmentation()
     @ObservedObject var imageQuality = FaceImageQuality()
     @State var processedImage: UIImage?

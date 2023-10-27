@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
+    
+    @Binding var selectedImage : UIImage?
     @Binding var isVisible: Bool
     var sourceType: Int
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(isVisible: $isVisible)
+        Coordinator(parent: self, isVisible: $isVisible)
     }
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
@@ -29,13 +31,21 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        var parent: ImagePicker
+        
         @Binding var isVisible: Bool
         
-        init(isVisible: Binding<Bool>) {
+        init(parent: ImagePicker, isVisible: Binding<Bool>) {
             _isVisible = isVisible
+            self.parent = parent
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                parent.selectedImage = image
+            }
+            
             isVisible = false
         }
         

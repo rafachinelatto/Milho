@@ -11,7 +11,7 @@ import SwiftUI
 struct MilhoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ImageTypeSelection()
         }
     }
 }
