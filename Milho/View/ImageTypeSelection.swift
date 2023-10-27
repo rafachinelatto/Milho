@@ -36,17 +36,21 @@ struct ImageTypeSelection: View {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                    
-                    Button("Segmentar imagem") {
-                        segmentation.inputImage = image
-                        segmentation.segmentImage()
-                    }
+                        .padding()
                     
                     if let outputImage = segmentation.outputImage {
                         Image(uiImage: outputImage)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
+                            .padding()
+                    } else {
+                        Button("Segmentar imagem") {
+                            segmentation.inputImage = image
+                            segmentation.segmentImage()
+                        }
+                        .padding()
                     }
+                    
                 }
                 
                 else if homeData.imageData.count == 0 {

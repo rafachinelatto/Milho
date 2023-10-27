@@ -14,7 +14,7 @@ class ImageSegmentation: ObservableObject {
     
     var inputImage: UIImage = UIImage()
     
-    var secondPartInputImage: UIImage = UIImage()
+    @Published var secondPartInputImage: UIImage = UIImage()
     @Published var outputImage: UIImage?
     @Published var quality: Float?
     
@@ -52,11 +52,9 @@ class ImageSegmentation: ObservableObject {
     
     private func removeBackgound(filterMask: CVPixelBuffer) {
         
-        
         guard let image = inputImage.cgImage else { return }
         guard let bgImage = UIImage.imageFromColor(color: .black, size: inputImage.size,  scale: inputImage.scale), let cgBgImage = bgImage.cgImage  else { return }
 
-        
         let input = CIImage(cgImage: image)
         let mask = CIImage(cvImageBuffer: filterMask)
         let background = CIImage(cgImage: cgBgImage)
@@ -75,7 +73,7 @@ class ImageSegmentation: ObservableObject {
         
         if let finalImage = blendedImage, let cgOutputImage = contex.createCGImage(finalImage, from: input.extent) {
     
-            self.secondPartInputImage = UIImage(cgImage: cgOutputImage)
+            self.secondPartInputImage = UIImage(cgImage: cgOutputImage, scale: inputImage.scale, orientation: inputImage.imageOrientation)
             
             faceContour()
         }
@@ -84,12 +82,14 @@ class ImageSegmentation: ObservableObject {
     private func faceContour() {
 
         guard let image = secondPartInputImage.cgImage else { return }
+        let imageOrientation = CGImagePropertyOrientation(inputImage.imageOrientation)
+        
         
         // Cria um request da biblioteca Vision
         let request = VNDetectFaceLandmarksRequest(completionHandler: self.handleFaceContour)
         
         // Cria o request handler que é responsável por executar o request.
-        let requestHandler = VNImageRequestHandler(cgImage: image, orientation: .up, options: [:])
+        let requestHandler = VNImageRequestHandler(cgImage: image, orientation: imageOrientation, options: [:])
         
         // Executa de forma assíncrona.
         DispatchQueue.global(qos: .userInitiated).async {
