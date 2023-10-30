@@ -22,16 +22,6 @@ struct ImageTypeSelection: View {
             VStack {
                 
                 
-//                if !homeData.allImages.isEmpty && homeData.mainView != nil {
-//                    Image(uiImage: homeData.mainView.image)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: UIScreen.main.bounds.width)
-//                    
-//                    Text("Tem certeza de que deseja analisar esta foto?")
-//                        .padding()
-//                }
-                
                 if let image = imageSelected {
                     Image(uiImage: image)
                         .resizable()
@@ -53,7 +43,7 @@ struct ImageTypeSelection: View {
                     
                 }
                 
-                else if homeData.imageData.count == 0 {
+                else  {
                     InitialSelectButton(showActionSheet: $showActionSheet)
                         .actionSheet(isPresented: $showActionSheet, content: { () -> ActionSheet in
                             ActionSheet(title: Text("Select Image"), message: Text("Please select an image from the image gallery or use the camera"), buttons: [
@@ -70,11 +60,6 @@ struct ImageTypeSelection: View {
                                 ActionSheet.Button.cancel()
                             ])
                         })
-                }
-                
-                else {
-                    // Loading View...
-                    ProgressView()
                 }
             }
             if showImagePicker {
