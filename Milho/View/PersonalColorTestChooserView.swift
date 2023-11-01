@@ -13,17 +13,30 @@ struct PersonalColorTestChooserView: View {
     
     var body: some View {
         VStack {
+            
             NavigationLink {
                 ImageTypeSelection()
             } label: {
                 Text("Teste automático")
+                    .frame(height: UIScreen.main.bounds.height/10)
+                    .frame(maxWidth: .infinity)
             }
             .buttonStyle(.bordered)
-
+            
+            NavigationLink {
+                ImageTypeSelection()
+            } label: {
+                Text("Teste manual")
+                    .frame(height: UIScreen.main.bounds.height/10)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+            
+            Spacer()
         }
         .navigationTitle("Coloração pessoal")
         .navigationBarTitleDisplayMode(.inline)
-        
+        .padding()
         
     }
 }

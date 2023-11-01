@@ -13,7 +13,7 @@ struct PersonalColoringTabItem: View {
             VStack {
                 
                 Spacer()
-                
+
                 Text("Você ainda não realizou o teste de coloração pessoal :(")
                     .foregroundStyle(.gray)
                     .multilineTextAlignment(.center)
@@ -24,6 +24,7 @@ struct PersonalColoringTabItem: View {
                     PersonalColorTestChooserView()
                 } label: {
                     Text("Fazer o teste")
+                        .frame(height: UIScreen.main.bounds.height/21)
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)

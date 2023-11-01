@@ -25,7 +25,7 @@ struct TabBar: View {
             Text("Aba de Estilos")
                 .tabItem {
                     
-                    Text("Coloração pessoal")
+                    Text("Estilos")
                     Image(systemName: "rectangle.fill.badge.person.crop")
                     
                 }.tag(2)
@@ -33,7 +33,7 @@ struct TabBar: View {
             Text("Aba de Inspirações")
                 .tabItem {
                     
-                    Text("Coloração pessoal")
+                    Text("Inspirações")
                     Image(systemName: "wand.and.rays")
                     
                 }.tag(3)
