@@ -11,7 +11,8 @@ import SwiftUI
 struct MilhoApp: App {
     var body: some Scene {
         WindowGroup {
-            ImageTypeSelection()
+            PersonalColoringView()
+            //TabBar()
         }
     }
 }
