@@ -18,6 +18,8 @@
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
 		A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FF2AF286C4004B25F8 /* TabBarView.swift */; };
+		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
+		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
 		BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */; };
 		BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */; };
 		BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */; };
@@ -38,6 +40,8 @@
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
 		A31111FF2AF286C4004B25F8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
+		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataModel.swift; sourceTree = "<group>"; };
 		BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionButton.swift; sourceTree = "<group>"; };
@@ -79,7 +83,6 @@
 				53E6E4A12ACC5120007CF1F8 /* Model */,
 				53E6E49F2ACC50D3007CF1F8 /* View */,
 				53E6E4A02ACC510A007CF1F8 /* ViewModel */,
-				530986E02ACC40C30068D4A2 /* Assets.xcassets */,
 				533B12E12AE6965300485B67 /* Extensions */,
 				530986E22ACC40C30068D4A2 /* Preview Content */,
 			);
@@ -90,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				530986E32ACC40C30068D4A2 /* Preview Assets.xcassets */,
+				530986E02ACC40C30068D4A2 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -105,13 +109,15 @@
 		53E6E49F2ACC50D3007CF1F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				530986DE2ACC40C20068D4A2 /* ContentView.swift */,
-				BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */,
-				BDC19B732AEAB07D00FA74F7 /* ImageTypeSelection.swift */,
-				BDC19B752AEAB0A100FA74F7 /* ImagePicker.swift */,
-				A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */,
-				A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */,
 				A31111FF2AF286C4004B25F8 /* TabBarView.swift */,
+				A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */,
+				A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */,
+				BDC19B732AEAB07D00FA74F7 /* ImageTypeSelection.swift */,
+				BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */,
+				A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */,
+				A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */,
+				530986DE2ACC40C20068D4A2 /* ContentView.swift */,
+				BDC19B752AEAB0A100FA74F7 /* ImagePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,7 +224,9 @@
 				530986DF2ACC40C20068D4A2 /* ContentView.swift in Sources */,
 				A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */,
 				A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */,
+				A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */,
 				530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */,
+				A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = J3D6H27WWS;
+				DEVELOPMENT_TEAM = NL8Y444HCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";
@@ -382,7 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = J3D6H27WWS;
+				DEVELOPMENT_TEAM = NL8Y444HCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";

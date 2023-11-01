@@ -14,22 +14,18 @@ struct InitialSelectButton: View {
         Button(action: {
             self.showActionSheet.toggle()
         }, label: {
-            ZStack {
-                Rectangle()
-                    .frame(width: 380, height: 480, alignment: .center)
-                    .foregroundColor(.black)
             
                 VStack(alignment: .center, content: {
                     Image(systemName: "camera.fill")
-                    .foregroundColor(.white)
+                        .foregroundColor(Color("AccentColor"))
                     .font(.system(size: 60))
                     
-                Text("Pick an image to process")
-                    .foregroundColor(.white)
-                    .padding()
+                    Text("Pick an image to process")
+                        .foregroundColor(Color("AccentColor"))
+                        .padding()
                 })
-            }
         })
+        .buttonStyle(.bordered)
     }
 }
 

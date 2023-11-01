@@ -13,7 +13,8 @@ struct TabBar: View {
     var body: some View {
         TabView(selection: $selectedTab,
                 content:  {
-            PersonalColoringView()
+            
+            PersonalColoringTabItem()
                 .tabItem {
                     
                     Text("Coloração pessoal")

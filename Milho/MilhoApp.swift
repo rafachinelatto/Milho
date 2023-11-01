@@ -11,8 +11,7 @@ import SwiftUI
 struct MilhoApp: App {
     var body: some Scene {
         WindowGroup {
-            PersonalColoringView()
-            //TabBar()
+            TabBar()
+            }
         }
     }
-}

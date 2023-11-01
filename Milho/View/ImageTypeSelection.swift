@@ -61,12 +61,19 @@ struct ImageTypeSelection: View {
                             ])
                         })
                 }
+                
             }
+            
+            
             if showImagePicker {
                 ImagePicker(selectedImage: $imageSelected, isVisible: $showImagePicker, sourceType: sourceType)
             }
         }
+        .navigationTitle("Coloração pessoal")
+        .navigationBarTitleDisplayMode(.inline)
+        
     }
+        
 }
 
 #Preview {

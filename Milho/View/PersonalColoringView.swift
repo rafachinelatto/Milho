@@ -10,10 +10,10 @@ import SwiftUI
 struct PersonalColoringView: View {
     
     @State private var currentTab = 0
-    @State private var enable = false
+    @State private var completeOnboarding = false
     
     var body: some View {
-        VStack (spacing: 42){
+        VStack (spacing: 24){
             TabView (selection: $currentTab) {
                 ForEach (OnboardingData.list) {viewData in
                     PersonalColoringOnboardingView(data: viewData)
@@ -25,19 +25,19 @@ struct PersonalColoringView: View {
             
             .onChange(of: currentTab) {
                 if currentTab == 4 {
-                    enable = true
+                    completeOnboarding = true
                 }
             }
-            Button(action: {
-                
-            }, label: {
-                Text("Fazer o teste")
-                    .font(.system(size: 19, weight: .medium))
+            
+            Button {
+                //End onboarding and navigate to app (TabBarView)
+            } label: {
+                Text("Navegar pelo app")
+                    .frame(height: UIScreen.main.bounds.height/25)
                     .frame(maxWidth: .infinity)
-                    .padding(5)
-            })
+            }
             .buttonStyle(.borderedProminent)
-            .disabled(!enable)
+            .disabled(!completeOnboarding)
             
         }
         .padding(16)
