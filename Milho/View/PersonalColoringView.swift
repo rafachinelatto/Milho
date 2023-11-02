@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct PersonalColoringView: View {
+struct PersonalColoring: View {
     
     @State private var currentTab = 0
     @State private var completeOnboarding = false
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     
     var body: some View {
         VStack (spacing: 24){
             TabView (selection: $currentTab) {
                 ForEach (OnboardingData.list) {viewData in
-                    PersonalColoringOnboardingView(data: viewData)
+                    PersonalColoringOnboarding(data: viewData)
                         .tag(viewData.id)
                 }
             }
@@ -30,7 +31,7 @@ struct PersonalColoringView: View {
             }
             
             Button {
-                //End onboarding and navigate to app (TabBarView)
+               isOnboarding = false
             } label: {
                 Text("Navegar pelo app")
                     .frame(height: UIScreen.main.bounds.height/25)

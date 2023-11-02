@@ -9,6 +9,7 @@ import SwiftUI
 struct TabBar: View {
     
     @State private var selectedTab = 0
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     
     var body: some View {
         TabView(selection: $selectedTab,

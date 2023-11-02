@@ -14,29 +14,58 @@ struct PersonalColorTestChooserView: View {
     var body: some View {
         VStack {
             
-            NavigationLink {
-                ImageTypeSelection()
-            } label: {
-                Text("Teste automático")
-                    .frame(height: UIScreen.main.bounds.height/10)
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.bordered)
+            Spacer(minLength: 32)
             
             NavigationLink {
                 ImageTypeSelection()
             } label: {
-                Text("Teste manual")
-                    .frame(height: UIScreen.main.bounds.height/10)
-                    .frame(maxWidth: .infinity)
+                VStack {
+                    Text("Realizar teste automático")
+                        .foregroundStyle(.primary)
+                        .fontWeight(.medium)
+                        .frame(maxWidth: .infinity)
+                    
+                    Spacer()
+                    //Place an Image() instead of a Spacer with the illustration vector planed
+                    
+                    Text("Deixe que a visão computacional te forneça sua paleta de cores!")
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding()
+                .frame(height: UIScreen.main.bounds.height/3)
             }
             .buttonStyle(.bordered)
             
-            Spacer()
+            Spacer(minLength: 32)
+            
+            NavigationLink {
+                ImageTypeSelection()
+            } label: {
+                VStack {
+                    Text("Realizar teste manual")
+                        .foregroundStyle(.primary)
+                        .fontWeight(.medium)
+                        .frame(maxWidth: .infinity)
+                    
+                    Spacer()
+                    //Place an Image() instead of a Spacer with the illustration vector planed
+                    
+                    Text("Escolha as cores que mais combinam com você e deixa que a gente faz o resto.")
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding()
+                .frame(height: UIScreen.main.bounds.height/3)
+            }
+            .buttonStyle(.bordered)
+            
+            
+            Spacer(minLength: 32)
         }
         .navigationTitle("Coloração pessoal")
         .navigationBarTitleDisplayMode(.inline)
-        .padding()
+        .padding(32)
         
     }
 }

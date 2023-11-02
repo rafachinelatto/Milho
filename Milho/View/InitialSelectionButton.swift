@@ -11,21 +11,21 @@ struct InitialSelectButton: View {
     @Binding var showActionSheet: Bool
     
     var body: some View {
-        Button(action: {
-            self.showActionSheet.toggle()
-        }, label: {
+        
+        VStack {
+            Button(action: {
+                self.showActionSheet.toggle()
+            }, label: {
+                Image(systemName: "camera.fill")
+                    .font(.system(size: UIScreen.main.bounds.width/6))
+            })
+            .foregroundStyle(.accent)
+            .buttonStyle(.bordered)
             
-                VStack(alignment: .center, content: {
-                    Image(systemName: "camera.fill")
-                        .foregroundColor(Color("AccentColor"))
-                    .font(.system(size: 60))
-                    
-                    Text("Pick an image to process")
-                        .foregroundColor(Color("AccentColor"))
-                        .padding()
-                })
-        })
-        .buttonStyle(.bordered)
+            Text("Tire uma foto ou selecione da galeria para começar seu teste de coloração pessoal.")
+                .foregroundStyle(.gray)
+                .padding()
+        }
     }
 }
 

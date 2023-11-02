@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PersonalColoringTabItem: View {
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,6 +31,12 @@ struct PersonalColoringTabItem: View {
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
+                
+                Button(action: {
+                    isOnboarding = true
+                }, label: {
+                    Text("Rever as dicas para o teste")
+                })
             }
             .navigationTitle("Coloração pessoal") //Change font to SF Pro Rounded or Pally
             .navigationBarTitleDisplayMode(.automatic)

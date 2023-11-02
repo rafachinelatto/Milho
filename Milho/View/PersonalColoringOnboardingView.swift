@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonalColoringOnboardingView: View {
+struct PersonalColoringOnboarding: View {
     
     var data: OnboardingData
     
@@ -33,6 +33,6 @@ struct PersonalColoringOnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalColoringOnboardingView(data: OnboardingData.list.first!)
+        PersonalColoringOnboarding(data: OnboardingData.list.first!)
     }
 }
