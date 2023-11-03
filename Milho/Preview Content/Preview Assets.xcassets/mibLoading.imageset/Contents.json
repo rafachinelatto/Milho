@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "MIB Loading #2.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,6 +12,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "MIB Loading #2 Dark.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },

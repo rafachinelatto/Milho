@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Lupa Loading #1.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,6 +12,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Lupa Loading #1 Dark.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },

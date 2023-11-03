@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Shoe Loading #3.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,6 +12,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Shoe Loading #3 Dark.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
