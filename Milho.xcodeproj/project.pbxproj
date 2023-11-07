@@ -10,7 +10,6 @@
 		530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530986DC2ACC40C20068D4A2 /* MilhoApp.swift */; };
 		530986DF2ACC40C20068D4A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530986DE2ACC40C20068D4A2 /* ContentView.swift */; };
 		530986E12ACC40C30068D4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530986E02ACC40C30068D4A2 /* Assets.xcassets */; };
-		530986E42ACC40C30068D4A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530986E32ACC40C30068D4A2 /* Preview Assets.xcassets */; };
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
 		533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E42AE6987300485B67 /* FaceImageQuality.swift */; };
@@ -32,7 +31,6 @@
 		530986DC2ACC40C20068D4A2 /* MilhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilhoApp.swift; sourceTree = "<group>"; };
 		530986DE2ACC40C20068D4A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		530986E02ACC40C30068D4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		530986E32ACC40C30068D4A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
 		533B12E42AE6987300485B67 /* FaceImageQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageQuality.swift; sourceTree = "<group>"; };
@@ -42,6 +40,7 @@
 		A31111FF2AF286C4004B25F8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
+		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataModel.swift; sourceTree = "<group>"; };
 		BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionButton.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		530986DB2ACC40C20068D4A2 /* Milho */ = {
 			isa = PBXGroup;
 			children = (
+				A37DDDC72AF9178100ADE49C /* Info.plist */,
 				530986DC2ACC40C20068D4A2 /* MilhoApp.swift */,
 				53E6E4A12ACC5120007CF1F8 /* Model */,
 				53E6E49F2ACC50D3007CF1F8 /* View */,
@@ -92,7 +92,6 @@
 		530986E22ACC40C30068D4A2 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				530986E32ACC40C30068D4A2 /* Preview Assets.xcassets */,
 				530986E02ACC40C30068D4A2 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -199,7 +198,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530986E42ACC40C30068D4A2 /* Preview Assets.xcassets in Resources */,
 				530986E12ACC40C30068D4A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,25 +355,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
 				DEVELOPMENT_TEAM = NL8Y444HCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Milho/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rafachinelatto.Milho;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andersonvulto.forhue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,25 +392,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
 				DEVELOPMENT_TEAM = NL8Y444HCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Milho/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rafachinelatto.Milho;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andersonvulto.forhue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

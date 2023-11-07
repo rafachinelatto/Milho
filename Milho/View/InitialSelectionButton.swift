@@ -19,7 +19,7 @@ struct InitialSelectButton: View {
                 Image(systemName: "camera.fill")
                     .font(.system(size: UIScreen.main.bounds.width/6))
             })
-            .foregroundStyle(.accent)
+            .foregroundStyle(Color("AccentColor"))
             .buttonStyle(.bordered)
             
             Text("Tire uma foto ou selecione da galeria para começar seu teste de coloração pessoal.")
