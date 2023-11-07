@@ -24,6 +24,17 @@ extension UIImage {
         
         return img
     }
+    
+    func thumbnail(compression: CGFloat) -> UIImage? {
+        
+        let imageSize = CGSize(
+            width: size.width * compression,
+            height: size.height * compression
+        )
+        return preparingThumbnail(of: imageSize)
+    }
+    
+    
 }
 
 extension CGImagePropertyOrientation {

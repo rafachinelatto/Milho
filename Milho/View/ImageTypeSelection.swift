@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import SimpleMatrixKit
 
 struct ImageTypeSelection: View {
     @StateObject var homeData = ImageTypeViewModel()
     @ObservedObject var segmentation = ImageSegmentation()
     @ObservedObject var imageQuality = FaceImageQuality()
+    @ObservedObject var colorAnalysis = ColorAnalysis()
     
     @State var imageSelected: UIImage?
     @State var showImagePicker: Bool = false
     @State var showActionSheet: Bool = false
     @State var sourceType: Int = 0
+    @State var colorArray: [UIColor] = []
+    @State var pixelDataArray: [UIColor] = []
+    @State var pixelNumber: Float = 0
     
     var body: some View {
         ZStack {
@@ -28,20 +33,25 @@ struct ImageTypeSelection: View {
                         .scaledToFit()
                         .padding()
                     
-                    if let outputImage = segmentation.outputImage {
-                        Image(uiImage: outputImage)
-                            .resizable()
-                            .scaledToFill()
-                            .padding()
+                    if !colorArray.isEmpty {
+                        Slider(value: $pixelNumber, in: 0...Float(colorArray.count - 1), step: 1)
+                        Rectangle()
+                            .fill(Color(colorArray[Int(pixelNumber)]))
+                        
                     } else {
                         Button("Segmentar imagem") {
                             segmentation.inputImage = image
                             segmentation.segmentImage()
+                            
+                            if let outputImage = segmentation.outputImage {
+                                colorArray = colorAnalysis.findColorsV2(outputImage)
+                            }
+                            
                         }
                         .padding()
                     }
-                    
                 }
+                
                 
                 else  {
                     InitialSelectButton(showActionSheet: $showActionSheet)
