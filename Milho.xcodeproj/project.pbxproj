@@ -19,14 +19,14 @@
 		536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */; };
 		536F632A2AFA5B46004E5A84 /* PositiveFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */; };
 		536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F632B2AFA5B6B004E5A84 /* ResultsView.swift */; };
+		53A258012AF12844006F5553 /* SwiftCluster in Frameworks */ = {isa = PBXBuildFile; productRef = 53A258002AF12844006F5553 /* SwiftCluster */; };
+		53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
 		A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FF2AF286C4004B25F8 /* TabBarView.swift */; };
 		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
 		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
-		53A258012AF12844006F5553 /* SwiftCluster in Frameworks */ = {isa = PBXBuildFile; productRef = 53A258002AF12844006F5553 /* SwiftCluster */; };
-		53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */; };
 		BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */; };
 		BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */; };
 		BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */; };
@@ -48,6 +48,7 @@
 		536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeFeedbackView.swift; sourceTree = "<group>"; };
 		536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedbackView.swift; sourceTree = "<group>"; };
 		536F632B2AFA5B6B004E5A84 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
 		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataModel.swift; sourceTree = "<group>"; };
 		BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionButton.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 				53E6E49F2ACC50D3007CF1F8 /* View */,
 				53E6E4A02ACC510A007CF1F8 /* ViewModel */,
 				533B12E12AE6965300485B67 /* Extensions */,
+				530986E02ACC40C30068D4A2 /* Assets.xcassets */,
 				530986E22ACC40C30068D4A2 /* Preview Content */,
 			);
 			path = Milho;
@@ -108,7 +109,6 @@
 		530986E22ACC40C30068D4A2 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				530986E02ACC40C30068D4A2 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -399,19 +399,21 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = forHue;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andersonvulto.forhue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -419,7 +421,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,19 +438,21 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = forHue;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The application needs to use your camera, in order to take pictures for the profile page";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andersonvulto.forhue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -456,7 +460,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
