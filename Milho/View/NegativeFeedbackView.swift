@@ -1,5 +1,5 @@
 //
-//  ResultsOffView.swift
+//  NegativeFeedbackView.swift
 //  Milho
 //
 //  Created by Ana Elisa Lima on 06/11/23.

@@ -25,6 +25,8 @@
 		A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FF2AF286C4004B25F8 /* TabBarView.swift */; };
 		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
 		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
+		53A258012AF12844006F5553 /* SwiftCluster in Frameworks */ = {isa = PBXBuildFile; productRef = 53A258002AF12844006F5553 /* SwiftCluster */; };
+		53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */; };
 		BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */; };
 		BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */; };
 		BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */; };
@@ -53,6 +55,7 @@
 		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
 		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataModel.swift; sourceTree = "<group>"; };
 		BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionButton.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A258012AF12844006F5553 /* SwiftCluster in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +149,7 @@
 				533B12E42AE6987300485B67 /* FaceImageQuality.swift */,
 				533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */,
 				BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */,
+				53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,6 +179,9 @@
 			dependencies = (
 			);
 			name = Milho;
+			packageProductDependencies = (
+				53A258002AF12844006F5553 /* SwiftCluster */,
+			);
 			productName = Milho;
 			productReference = 530986D92ACC40C20068D4A2 /* Milho.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +210,9 @@
 				Base,
 			);
 			mainGroup = 530986D02ACC40C20068D4A2;
+			packageReferences = (
+				53A257FF2AF12844006F5553 /* XCRemoteSwiftPackageReference "SwiftCluster" */,
+			);
 			productRefGroup = 530986DA2ACC40C20068D4A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +248,7 @@
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */,
 				BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */,
+				53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */,
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
@@ -470,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53A257FF2AF12844006F5553 /* XCRemoteSwiftPackageReference "SwiftCluster" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eheitfield/SwiftCluster.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53A258002AF12844006F5553 /* SwiftCluster */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53A257FF2AF12844006F5553 /* XCRemoteSwiftPackageReference "SwiftCluster" */;
+			productName = SwiftCluster;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 530986D12ACC40C20068D4A2 /* Project object */;
 }
