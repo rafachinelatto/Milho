@@ -40,7 +40,7 @@ struct ImageTypeSelection: View {
                             .fill(Color(colorArray[Int(pixelNumber)]))
                         
                     } else {
-                        Button("Segmentar imagem") {
+                        Button("Get colors") {
                             segmentation.inputImage = image
                             segmentation.segmentImage()
                             
