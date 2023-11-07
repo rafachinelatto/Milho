@@ -13,6 +13,12 @@
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
 		533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E42AE6987300485B67 /* FaceImageQuality.swift */; };
+		536F63222AFA5A97004E5A84 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63212AFA5A97004E5A84 /* Loading.swift */; };
+		536F63242AFA5ABD004E5A84 /* LoadingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63232AFA5ABD004E5A84 /* LoadingImage.swift */; };
+		536F63262AFA5AEA004E5A84 /* LoadingResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */; };
+		536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */; };
+		536F632A2AFA5B46004E5A84 /* PositiveFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */; };
+		536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F632B2AFA5B6B004E5A84 /* ResultsView.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
@@ -34,6 +40,12 @@
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
 		533B12E42AE6987300485B67 /* FaceImageQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageQuality.swift; sourceTree = "<group>"; };
+		536F63212AFA5A97004E5A84 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		536F63232AFA5ABD004E5A84 /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
+		536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResultsView.swift; sourceTree = "<group>"; };
+		536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeFeedbackView.swift; sourceTree = "<group>"; };
+		536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedbackView.swift; sourceTree = "<group>"; };
+		536F632B2AFA5B6B004E5A84 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -113,6 +125,12 @@
 				A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */,
 				BDC19B732AEAB07D00FA74F7 /* ImageTypeSelection.swift */,
 				BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */,
+				536F63212AFA5A97004E5A84 /* Loading.swift */,
+				536F63232AFA5ABD004E5A84 /* LoadingImage.swift */,
+				536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */,
+				536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */,
+				536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */,
+				536F632B2AFA5B6B004E5A84 /* ResultsView.swift */,
 				A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */,
 				A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */,
 				530986DE2ACC40C20068D4A2 /* ContentView.swift */,
@@ -210,7 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC19B742AEAB07D00FA74F7 /* ImageTypeSelection.swift in Sources */,
+				536F63262AFA5AEA004E5A84 /* LoadingResultsView.swift in Sources */,
+				536F63222AFA5A97004E5A84 /* Loading.swift in Sources */,
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
+				536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */,
+				536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */,
@@ -222,8 +244,10 @@
 				530986DF2ACC40C20068D4A2 /* ContentView.swift in Sources */,
 				A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */,
 				A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */,
+				536F632A2AFA5B46004E5A84 /* PositiveFeedbackView.swift in Sources */,
 				A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */,
 				530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */,
+				536F63242AFA5ABD004E5A84 /* LoadingImage.swift in Sources */,
 				A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = NL8Y444HCT;
+				DEVELOPMENT_TEAM = J3D6H27WWS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
@@ -396,7 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = NL8Y444HCT;
+				DEVELOPMENT_TEAM = J3D6H27WWS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
