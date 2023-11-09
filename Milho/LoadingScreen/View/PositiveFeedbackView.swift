@@ -10,16 +10,17 @@ import SwiftUI
 struct PositiveFeedbackView: View {
     var body: some View {
         NavigationView {
-            VStack {
+            VStack (spacing: 40){
                 Image("posFeedback")
-                    .padding()
-                
-                Text("Conseguimos analisar sua foto!")
+                                
+                Text("Tudo certo! Identificamos que você possui afinidade com o perfil de")
                     .font(Font.custom("SF Pro Rounded", size: 19)
                     .weight(.medium))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
                     .padding()
+                
+                Image("primaveraPura")
                 
                 NavigationLink {
                     ResultsView()
@@ -30,8 +31,8 @@ struct PositiveFeedbackView: View {
                 }
                 .foregroundStyle(.accent)
             }
-            .navigationTitle("Teste colorimetria")
-            .navigationBarTitleDisplayMode(.automatic)
+            //.navigationTitle("Teste colorimetria")
+            //.navigationBarTitleDisplayMode(.automatic)
         }
     }
 }
