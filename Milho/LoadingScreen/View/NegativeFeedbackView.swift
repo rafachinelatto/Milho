@@ -56,6 +56,8 @@ struct NegativeFeedbackView: View {
                         })
                         .buttonStyle(.borderless)
                         }
+                    
+                        
                     }
                 .padding()
                 

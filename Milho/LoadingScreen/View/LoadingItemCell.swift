@@ -12,13 +12,16 @@ struct LoadingItemCell: View {
     @State private var progress: Double = 0.0
     @State private var timer: Timer? = nil
     @State private var isComplete = false
+    
+    let time: Double
 
     
     var body: some View {
         if isComplete {
             Image(systemName: "checkmark")
+                .foregroundStyle(.gray)
         } else {
-            ProgressView(value: progress, total: 1.3)
+            ProgressView(value: progress, total: time)
                 .font(Font.custom("SF Pro", size: 17))
                 .progressViewStyle(.circular)
                 .onAppear {
@@ -31,7 +34,7 @@ struct LoadingItemCell: View {
     func startProgress() {
         progress = 0.0
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if progress < 1.3 {
+            if progress < time {
                 progress += 0.1
             } else {
                 timer?.invalidate()
@@ -42,5 +45,5 @@ struct LoadingItemCell: View {
 }
 
 #Preview {
-    LoadingItemCell()
+    LoadingItemCell(time: 2.0)
 }
