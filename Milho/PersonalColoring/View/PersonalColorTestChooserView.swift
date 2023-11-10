@@ -12,60 +12,89 @@ struct PersonalColorTestChooserView: View {
     @State private var isImageTypeSelectionActive = false
     
     var body: some View {
-        VStack {
-            
-            Spacer(minLength: 32)
-            
-            NavigationLink {
-                ImageTypeSelection()
-            } label: {
-                VStack {
-                    Text("Realizar teste automático")
-                        .foregroundStyle(.primary)
-                        .fontWeight(.medium)
-                        .frame(maxWidth: .infinity)
-                    
-                    Spacer()
-                    //Place an Image() instead of a Spacer with the illustration vector planed
-                    
-                    Text("Deixe que a visão computacional te forneça sua paleta de cores!")
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.leading)
-                }
-                .padding()
-                .frame(height: UIScreen.main.bounds.height/3)
-            }
-            .buttonStyle(.bordered)
-            
-            Spacer(minLength: 32)
+        
+        VStack (spacing: 48){
             
             NavigationLink {
                 ImageTypeSelection()
             } label: {
-                VStack {
-                    Text("Realizar teste manual")
-                        .foregroundStyle(.primary)
-                        .fontWeight(.medium)
-                        .frame(maxWidth: .infinity)
+                ZStack {
+                    RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
+                        .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
+                    VStack (spacing: 8){
+                        Image("testeAutomatico")
+                            .scaledToFill()
+                            .frame(alignment: .trailing)
+                        
+                        HStack {
+                            Text("Realizar teste automático")
+                                .foregroundStyle(.primary)
+                                .font(Font.custom("SF Pro Rounded", size: 19))
+                                .fontWeight(.medium)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text("Deixe que a visão computacional te forneça sua paleta de cores!")
+                                .foregroundStyle(.secondary)
+                                .fontWeight(.regular)
+                                .font(Font.custom("SF Pro Rounded", size: 16))
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
+                    }
+                    .padding()
                     
-                    Spacer()
-                    //Place an Image() instead of a Spacer with the illustration vector planed
-                    
-                    Text("Escolha as cores que mais combinam com você e deixa que a gente faz o resto.")
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.leading)
                 }
-                .padding()
-                .frame(height: UIScreen.main.bounds.height/3)
+                
             }
-            .buttonStyle(.bordered)
             
+            NavigationLink {
+                ImageTypeSelection()
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
+                        .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
+                    VStack (spacing: 8){
+                        Image("testeManual")
+                            .scaledToFill()
+                            .frame(alignment: .trailing)
+                        
+                        HStack {
+                            Text("Realizar teste manual")
+                                .foregroundStyle(.primary)
+                                .font(.system(size: 19))
+                                .fontWeight(.medium)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text("Escolha as cores que mais combinam com você e deixa que a gente faz o resto.")
+                                .foregroundStyle(.secondary)
+                                .fontWeight(.regular)
+                                .font(.system(size: 16))
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                    
+                }
+                
+            }
             
-            Spacer(minLength: 32)
+
         }
         .navigationTitle("Coloração pessoal")
         .navigationBarTitleDisplayMode(.inline)
-        .padding(32)
+        .padding(41)
+        
         
     }
+    
+}
+
+
+#Preview {
+    PersonalColorTestChooserView()
 }

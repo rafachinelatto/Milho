@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct LoadingResultsView: View {
+
+    @State private var activeImageIndex = 0
+    @State private var show = false
+    
     var body: some View {
-            VStack (alignment: .center) {
+            VStack (alignment: .center, spacing: 32) {
                 LoadingImage()
-                    .padding(.bottom)
-                Text("Estamos analisando a foto")
-                    .font(Font.custom("SF Pro", size: 17)
-                    .weight(.medium))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.black)
-                    .padding()
-                Loading()
+                LoadingInfoView()
             }
         }
     }
