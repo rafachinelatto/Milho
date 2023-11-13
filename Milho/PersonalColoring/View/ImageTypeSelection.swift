@@ -11,8 +11,10 @@ import SimpleMatrixKit
 struct ImageTypeSelection: View {
     @StateObject var homeData = ImageTypeViewModel()
     @ObservedObject var segmentation = ImageSegmentation()
+    @ObservedObject var colorAnalysisV2 = ColorAnalysisV2()
     @ObservedObject var imageQuality = FaceImageQuality()
     @ObservedObject var colorAnalysis = ColorAnalysis()
+    @ObservedObject var skinToneAnalysis = SkinToneAnalysis()
     
     @State var imageSelected: UIImage?
     @State var showImagePicker: Bool = false
@@ -33,20 +35,25 @@ struct ImageTypeSelection: View {
                         .scaledToFit()
                         .padding()
                     
-                    if !colorArray.isEmpty {
-                        Slider(value: $pixelNumber, in: 0...Float(colorArray.count - 1), step: 1)
-                            .padding()
+                    
+                    if let skinTone = skinToneAnalysis.skinTone {
+                        
                         Rectangle()
-                            .fill(Color(colorArray[Int(pixelNumber)]))
+                            .fill(Color(uiColor: skinTone))
+                            .scaledToFit()
                         
                     } else {
                         Button("Get colors") {
-                            segmentation.inputImage = image
-                            segmentation.segmentImage()
                             
-                            if let outputImage = segmentation.outputImage {
-                                colorArray = colorAnalysis.findColorsV2(outputImage)
-                            }
+                            skinToneAnalysis.inputImage = image
+                            skinToneAnalysis.analysis()
+                            
+                            //                            segmentation.inputImage = image
+                            //                            segmentation.segmentImage()
+                            //
+                            //                            if let outputImage = segmentation.outputImage {
+                            //                                colorArray = colorAnalysis.findColorsV2(outputImage)
+                            //                            }
                             
                         }
                         .padding()
@@ -84,7 +91,7 @@ struct ImageTypeSelection: View {
         .navigationBarTitleDisplayMode(.inline)
         
     }
-        
+    
 }
 
 #Preview {
