@@ -5,14 +5,14 @@
 //  Created by Ana Elisa Lima on 10/11/23.
 //
 
-import SwiftUI
+import Foundation
+import UIKit
 
-struct ColorsArray: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class ColorsArray {
+  var colors: [ColorsData] = []
+    
+    init(colors: [ColorsData]) {
+        self.colors = colors
+        
     }
-}
-
-#Preview {
-    ColorsArray()
 }

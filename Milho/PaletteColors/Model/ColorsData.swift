@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct ColorsData: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct ColorsData {
+    
+    var neutralTones: [UIColor]
+    var bestColors: [UIColor]
+    var accessories: [UIColor]
 }
 
-#Preview {
-    ColorsData()
-}
+
