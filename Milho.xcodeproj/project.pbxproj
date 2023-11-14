@@ -13,6 +13,7 @@
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
 		533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E42AE6987300485B67 /* FaceImageQuality.swift */; };
+		536BF9B82B03932400A29F05 /* ContrastAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF9B72B03932400A29F05 /* ContrastAnalysis.swift */; };
 		536F63222AFA5A97004E5A84 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63212AFA5A97004E5A84 /* Loading.swift */; };
 		536F63242AFA5ABD004E5A84 /* LoadingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63232AFA5ABD004E5A84 /* LoadingImage.swift */; };
 		536F63262AFA5AEA004E5A84 /* LoadingResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */; };
@@ -44,6 +45,7 @@
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
 		533B12E42AE6987300485B67 /* FaceImageQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageQuality.swift; sourceTree = "<group>"; };
+		536BF9B72B03932400A29F05 /* ContrastAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastAnalysis.swift; sourceTree = "<group>"; };
 		536F63212AFA5A97004E5A84 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		536F63232AFA5ABD004E5A84 /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
 		536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResultsView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */,
 				53C4CAAB2AFBB3CA009BC33C /* ColorAnalysisV2.swift */,
 				532CDCD02B024B6100D09504 /* SkinToneAnalysis.swift */,
+				536BF9B72B03932400A29F05 /* ContrastAnalysis.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */,
 				536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
+				536BF9B82B03932400A29F05 /* ContrastAnalysis.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				532CDCD12B024B6100D09504 /* SkinToneAnalysis.swift in Sources */,
 				533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */,

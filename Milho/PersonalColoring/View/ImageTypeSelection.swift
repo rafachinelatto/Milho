@@ -15,6 +15,8 @@ struct ImageTypeSelection: View {
     @ObservedObject var imageQuality = FaceImageQuality()
     @ObservedObject var colorAnalysis = ColorAnalysis()
     @ObservedObject var skinToneAnalysis = SkinToneAnalysis()
+    @ObservedObject var contrastAnalysis = ContrastAnalysis()
+    
     
     @State var imageSelected: UIImage?
     @State var showImagePicker: Bool = false
@@ -36,17 +38,16 @@ struct ImageTypeSelection: View {
                         .padding()
                     
                     
-                    if let skinTone = skinToneAnalysis.skinTone {
-                        
+                    if let eyeColor = contrastAnalysis.eyeColor {
                         Rectangle()
-                            .fill(Color(uiColor: skinTone))
+                            .fill(Color(eyeColor))
                             .scaledToFit()
                         
                     } else {
-                        Button("Get colors") {
+                        Button("Get eyes") {
                             
-                            skinToneAnalysis.inputImage = image
-                            skinToneAnalysis.analysis()
+                            contrastAnalysis.inputImage = image
+                            contrastAnalysis.analysis()
                             
                             //                            segmentation.inputImage = image
                             //                            segmentation.segmentImage()
@@ -58,6 +59,7 @@ struct ImageTypeSelection: View {
                         }
                         .padding()
                     }
+
                 }
                 
                 
