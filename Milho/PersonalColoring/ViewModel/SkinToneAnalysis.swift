@@ -117,6 +117,7 @@ class SkinToneAnalysis: ObservableObject {
         
         let boundingBox = observation.boundingBox
         
+        
         guard let faceContourMinX = faceContour.last else { return }
         guard let faceContourMaxX = faceContour.first else { return }
         

@@ -16,6 +16,7 @@ struct ImageTypeSelection: View {
     @ObservedObject var colorAnalysis = ColorAnalysis()
     @ObservedObject var skinToneAnalysis = SkinToneAnalysis()
     @ObservedObject var contrastAnalysis = ContrastAnalysis()
+    @ObservedObject var colorAnalysisV3 = ColorAnalysisV3()
     
     
     @State var imageSelected: UIImage?
@@ -37,17 +38,25 @@ struct ImageTypeSelection: View {
                         .scaledToFit()
                         .padding()
                     
+                    if let hairContrast = colorAnalysisV3.hairContrast, let eyeContrast = colorAnalysisV3.eyeContrast {
+                        HStack{
+                            Text("Hair Contrast: \(hairContrast)")
+                            Text("Eye Contrast: \(eyeContrast)")
+                        }
+                        
+                    }
                     
-                    if let eyeColor = contrastAnalysis.eyeColor {
+                    if let skinColor = colorAnalysisV3.skinTone {
+                        
                         Rectangle()
-                            .fill(Color(eyeColor))
+                            .fill(Color(skinColor))
                             .scaledToFit()
                         
                     } else {
                         Button("Get eyes") {
                             
-                            contrastAnalysis.inputImage = image
-                            contrastAnalysis.analysis()
+                            colorAnalysisV3.inputImage = image
+                            colorAnalysisV3.analysis()
                             
                             //                            segmentation.inputImage = image
                             //                            segmentation.segmentImage()
