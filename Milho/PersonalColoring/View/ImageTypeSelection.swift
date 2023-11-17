@@ -14,6 +14,7 @@ struct ImageTypeSelection: View {
     @ObservedObject var imageQuality = FaceImageQuality()
     @ObservedObject var colorAnalysis = ColorAnalysis()
     
+    
     @State var imageSelected: UIImage?
     @State var showImagePicker: Bool = false
     @State var showActionSheet: Bool = false
@@ -33,24 +34,37 @@ struct ImageTypeSelection: View {
                         .scaledToFit()
                         .padding()
                     
-                    if !colorArray.isEmpty {
-                        Slider(value: $pixelNumber, in: 0...Float(colorArray.count - 1), step: 1)
-                            .padding()
+                    if let hairContrast = colorAnalysis.hairContrast, let eyeContrast = colorAnalysis.eyeContrast {
+                        HStack{
+                            Text("Hair Contrast: \(hairContrast)")
+                            Text("Eye Contrast: \(eyeContrast)")
+                        }
+                        
+                    }
+                    
+                    if let skinColor = colorAnalysis.skinTone {
+                        
                         Rectangle()
-                            .fill(Color(colorArray[Int(pixelNumber)]))
+                            .fill(Color(skinColor))
+                            .scaledToFit()
                         
                     } else {
-                        Button("Get colors") {
-                            segmentation.inputImage = image
-                            segmentation.segmentImage()
+                        Button("Get eyes") {
                             
-                            if let outputImage = segmentation.outputImage {
-                                colorArray = colorAnalysis.findColorsV2(outputImage)
-                            }
+                            colorAnalysis.inputImage = image
+                            colorAnalysis.analysis()
+                            
+                            //                            segmentation.inputImage = image
+                            //                            segmentation.segmentImage()
+                            //
+                            //                            if let outputImage = segmentation.outputImage {
+                            //                                colorArray = colorAnalysis.findColorsV2(outputImage)
+                            //                            }
                             
                         }
                         .padding()
                     }
+
                 }
                 
                 
@@ -84,7 +98,7 @@ struct ImageTypeSelection: View {
         .navigationBarTitleDisplayMode(.inline)
         
     }
-        
+    
 }
 
 #Preview {

@@ -19,7 +19,7 @@
 		536F632A2AFA5B46004E5A84 /* PositiveFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */; };
 		536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F632B2AFA5B6B004E5A84 /* ResultsView.swift */; };
 		53A258012AF12844006F5553 /* SwiftCluster in Frameworks */ = {isa = PBXBuildFile; productRef = 53A258002AF12844006F5553 /* SwiftCluster */; };
-		53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */; };
+		53A585292B064D3000E25B25 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A585282B064D3000E25B25 /* ColorAnalysis.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
@@ -47,7 +47,7 @@
 		536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeFeedbackView.swift; sourceTree = "<group>"; };
 		536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedbackView.swift; sourceTree = "<group>"; };
 		536F632B2AFA5B6B004E5A84 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
-		53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
+		53A585282B064D3000E25B25 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				533B12E42AE6987300485B67 /* FaceImageQuality.swift */,
 				533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */,
 				BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */,
-				53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */,
+				53A585282B064D3000E25B25 /* ColorAnalysis.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,11 +285,11 @@
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
 				536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */,
 				536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */,
+				53A585292B064D3000E25B25 /* ColorAnalysis.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */,
 				BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */,
-				53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */,
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
@@ -435,7 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho\"";
-				DEVELOPMENT_TEAM = NL8Y444HCT;
+				DEVELOPMENT_TEAM = J3D6H27WWS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
