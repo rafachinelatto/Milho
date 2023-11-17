@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530986DC2ACC40C20068D4A2 /* MilhoApp.swift */; };
 		530986E12ACC40C30068D4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530986E02ACC40C30068D4A2 /* Assets.xcassets */; };
-		532CDCD12B024B6100D09504 /* SkinToneAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532CDCD02B024B6100D09504 /* SkinToneAnalysis.swift */; };
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
 		533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E42AE6987300485B67 /* FaceImageQuality.swift */; };
-		536BF9B82B03932400A29F05 /* ContrastAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536BF9B72B03932400A29F05 /* ContrastAnalysis.swift */; };
 		536F63222AFA5A97004E5A84 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63212AFA5A97004E5A84 /* Loading.swift */; };
 		536F63242AFA5ABD004E5A84 /* LoadingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63232AFA5ABD004E5A84 /* LoadingImage.swift */; };
 		536F63262AFA5AEA004E5A84 /* LoadingResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */; };
@@ -22,9 +20,7 @@
 		536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F632B2AFA5B6B004E5A84 /* ResultsView.swift */; };
 		5381C9C32AFA83E1006A731C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5381C9C22AFA83E1006A731C /* Preview Assets.xcassets */; };
 		53A258012AF12844006F5553 /* SwiftCluster in Frameworks */ = {isa = PBXBuildFile; productRef = 53A258002AF12844006F5553 /* SwiftCluster */; };
-		53A585292B064D3000E25B25 /* ColorAnalysisV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A585282B064D3000E25B25 /* ColorAnalysisV3.swift */; };
-		53C4CAAC2AFBB3CA009BC33C /* ColorAnalysisV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4CAAB2AFBB3CA009BC33C /* ColorAnalysisV2.swift */; };
-		53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */; };
+		53A585292B064D3000E25B25 /* ColorAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A585282B064D3000E25B25 /* ColorAnalysis.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
@@ -42,11 +38,9 @@
 		530986D92ACC40C20068D4A2 /* Milho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530986DC2ACC40C20068D4A2 /* MilhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilhoApp.swift; sourceTree = "<group>"; };
 		530986E02ACC40C30068D4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		532CDCD02B024B6100D09504 /* SkinToneAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinToneAnalysis.swift; sourceTree = "<group>"; };
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
 		533B12E42AE6987300485B67 /* FaceImageQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageQuality.swift; sourceTree = "<group>"; };
-		536BF9B72B03932400A29F05 /* ContrastAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastAnalysis.swift; sourceTree = "<group>"; };
 		536F63212AFA5A97004E5A84 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		536F63232AFA5ABD004E5A84 /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
 		536F63252AFA5AEA004E5A84 /* LoadingResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResultsView.swift; sourceTree = "<group>"; };
@@ -54,9 +48,7 @@
 		536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedbackView.swift; sourceTree = "<group>"; };
 		536F632B2AFA5B6B004E5A84 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		5381C9C22AFA83E1006A731C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "Milho/Preview Content/Preview Assets.xcassets"; sourceTree = SOURCE_ROOT; };
-		53A585282B064D3000E25B25 /* ColorAnalysisV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysisV3.swift; sourceTree = "<group>"; };
-		53C4CAAB2AFBB3CA009BC33C /* ColorAnalysisV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysisV2.swift; sourceTree = "<group>"; };
-		53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
+		53A585282B064D3000E25B25 /* ColorAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnalysis.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -172,11 +164,7 @@
 				533B12E42AE6987300485B67 /* FaceImageQuality.swift */,
 				533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */,
 				BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */,
-				53C4F8672AEFD48D0097A8E6 /* ColorAnalysis.swift */,
-				53C4CAAB2AFBB3CA009BC33C /* ColorAnalysisV2.swift */,
-				532CDCD02B024B6100D09504 /* SkinToneAnalysis.swift */,
-				536BF9B72B03932400A29F05 /* ContrastAnalysis.swift */,
-				53A585282B064D3000E25B25 /* ColorAnalysisV3.swift */,
+				53A585282B064D3000E25B25 /* ColorAnalysis.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,17 +293,13 @@
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
 				536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */,
 				536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */,
-				53A585292B064D3000E25B25 /* ColorAnalysisV3.swift in Sources */,
+				53A585292B064D3000E25B25 /* ColorAnalysis.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
-				536BF9B82B03932400A29F05 /* ContrastAnalysis.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
-				532CDCD12B024B6100D09504 /* SkinToneAnalysis.swift in Sources */,
 				533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */,
 				BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */,
-				53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */,
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
-				53C4CAAC2AFBB3CA009BC33C /* ColorAnalysisV2.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
 				BDC19B762AEAB0A100FA74F7 /* ImagePicker.swift in Sources */,
 				A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */,

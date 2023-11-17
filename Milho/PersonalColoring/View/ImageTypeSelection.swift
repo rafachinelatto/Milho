@@ -11,12 +11,8 @@ import SimpleMatrixKit
 struct ImageTypeSelection: View {
     @StateObject var homeData = ImageTypeViewModel()
     @ObservedObject var segmentation = ImageSegmentation()
-    @ObservedObject var colorAnalysisV2 = ColorAnalysisV2()
     @ObservedObject var imageQuality = FaceImageQuality()
     @ObservedObject var colorAnalysis = ColorAnalysis()
-    @ObservedObject var skinToneAnalysis = SkinToneAnalysis()
-    @ObservedObject var contrastAnalysis = ContrastAnalysis()
-    @ObservedObject var colorAnalysisV3 = ColorAnalysisV3()
     
     
     @State var imageSelected: UIImage?
@@ -38,7 +34,7 @@ struct ImageTypeSelection: View {
                         .scaledToFit()
                         .padding()
                     
-                    if let hairContrast = colorAnalysisV3.hairContrast, let eyeContrast = colorAnalysisV3.eyeContrast {
+                    if let hairContrast = colorAnalysis.hairContrast, let eyeContrast = colorAnalysis.eyeContrast {
                         HStack{
                             Text("Hair Contrast: \(hairContrast)")
                             Text("Eye Contrast: \(eyeContrast)")
@@ -46,7 +42,7 @@ struct ImageTypeSelection: View {
                         
                     }
                     
-                    if let skinColor = colorAnalysisV3.skinTone {
+                    if let skinColor = colorAnalysis.skinTone {
                         
                         Rectangle()
                             .fill(Color(skinColor))
@@ -55,8 +51,8 @@ struct ImageTypeSelection: View {
                     } else {
                         Button("Get eyes") {
                             
-                            colorAnalysisV3.inputImage = image
-                            colorAnalysisV3.analysis()
+                            colorAnalysis.inputImage = image
+                            colorAnalysis.analysis()
                             
                             //                            segmentation.inputImage = image
                             //                            segmentation.segmentImage()
