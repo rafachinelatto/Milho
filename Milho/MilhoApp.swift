@@ -17,10 +17,6 @@ struct MilhoApp: App {
             if isOnboarding {
                 PersonalColoring()
             } else {
-<<<<<<< HEAD
-=======
-                
->>>>>>> f86765b (personal coloring view modified)
                 TabBar()
             }
             
