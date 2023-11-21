@@ -44,3 +44,7 @@ struct PersonalColoring: View {
         .padding(16)
     }
 }
+
+#Preview {
+    PersonalColoring()
+}
