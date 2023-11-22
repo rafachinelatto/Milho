@@ -12,15 +12,16 @@ class ColorAnalysis: ObservableObject {
     var inputImage: UIImage = UIImage()
     
     @Published var skinTone: UIColor?
-    @Published var eyeContrast: CGFloat?
-    @Published var hairContrast: CGFloat?
+    @Published var contrast: Int?   // Informação do contraste da pele: 0 -> baixo, 1 -> médio, 2 -> alto.
     
     var skinToneImage: UIImage?
     var grayScaleImage: UIImage?
     var eyeColorImage: UIImage?
     var hairColorImage: UIImage?
+    @Published var eyebrowColorImage: UIImage?
     var eyeColor: UIColor?
     var hairColor: UIColor?
+    var eyebrowColor: UIColor?
     
     func analysis() {
         getPoints()
@@ -28,8 +29,8 @@ class ColorAnalysis: ObservableObject {
         grayScale()
         getEyeColor()
         getHairColor()
+        getEyebrowColor()
         getContrastRate()
-        
     }
     
     private func getContrastRate() {
@@ -38,19 +39,43 @@ class ColorAnalysis: ObservableObject {
         let green = ciSkinToneColor.green
         let blue = ciSkinToneColor.blue
         
-        let skinToneGrayScale: CGFloat = 0.299*red + 0.587*green + 0.114*blue
+        let skinToneGrayScale: CGFloat = 10 - 10*(0.299*red + 0.587*green + 0.114*blue)
         
         let ciEyeColor = CIColor(color: eyeColor ?? .clear)
         let ciHairColor = CIColor(color: hairColor ?? .clear)
+        let ciEyebrowColor = CIColor(color: eyebrowColor ?? .clear)
         
-        let eye = ciEyeColor.red
-        let hair = ciHairColor.red
+        let eye = 10 - 10*ciEyeColor.red
+        let eyebrow = 10 - 10*ciEyebrowColor.red
+        let hair = 10 - 10*ciHairColor.red
         
-        eyeContrast = eye / skinToneGrayScale
-        hairContrast = hair / skinToneGrayScale
+        let faceColors = [eye, eyebrow, hair, skinToneGrayScale]
+        guard let faceColorMax = faceColors.max() else { return }
+        guard let faceColorMin = faceColors.min() else { return }
         
+        let faceContrast = faceColorMax - faceColorMin
+        
+        print(faceContrast)
+        print("cabelo: \(hair)")
+        print("olho: \(eye)")
+        print("sombrancelha: \(eyebrow)")
+        print("pele: \(skinToneGrayScale)")
+        
+        
+        if (faceContrast >= 0) && (faceContrast <= 3) {
+            self.contrast = 0
+        }
+        else if (faceContrast > 3) && (faceContrast <= 7) {
+            self.contrast = 1
+        }
+        else {
+            self.contrast = 2
+        }
+        
+        if let contrast = self.contrast {
+            print(contrast)
+        }
     }
-    
     
     private func getSkinColor() {
         guard let image = skinToneImage else { return }
@@ -66,7 +91,7 @@ class ColorAnalysis: ObservableObject {
         var blueSum: Double = 0
         var alphaSum: Double = 0
         var count: Double = 0
-
+        
         for x in 0..<pixelWidth {
             for y in 0..<pixelHeight {
                 
@@ -90,7 +115,7 @@ class ColorAnalysis: ObservableObject {
                 count += 1
             }
         }
-
+        
         if count > 0 {
             let color = UIColor(red: redSum / Double(count), green: greenSum / Double(count), blue: blueSum / Double(count), alpha: alphaSum / Double(count))
             
@@ -110,7 +135,7 @@ class ColorAnalysis: ObservableObject {
         var graySum: Double = 0
         var alphaSum: Double = 0
         var count: Double = 0
-
+        
         for x in 0..<pixelWidth {
             for y in 0..<pixelHeight {
                 
@@ -130,7 +155,7 @@ class ColorAnalysis: ObservableObject {
                 count += 1
             }
         }
-
+        
         if count > 0 {
             let color = UIColor(red: graySum / Double(count), green: graySum / Double(count), blue: graySum / Double(count), alpha: graySum / Double(count))
             
@@ -150,7 +175,7 @@ class ColorAnalysis: ObservableObject {
         var graySum: Double = 0
         var alphaSum: Double = 0
         var count: Double = 0
-
+        
         for x in 0..<pixelWidth {
             for y in 0..<pixelHeight {
                 
@@ -170,11 +195,51 @@ class ColorAnalysis: ObservableObject {
                 count += 1
             }
         }
-
+        
         if count > 0 {
             let color = UIColor(red: graySum / Double(count), green: graySum / Double(count), blue: graySum / Double(count), alpha: graySum / Double(count))
             
             eyeColor = color
+        }
+    }
+    
+    private func getEyebrowColor() {
+        guard let image = eyebrowColorImage else { return }
+        
+        let pixelWidth = Int(image.size.width)
+        let pixelHeight = Int(image.size.height)
+        
+        guard let pixelData = image.cgImage?.dataProvider?.data else { return }
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        
+        var graySum: Double = 0
+        var alphaSum: Double = 0
+        var count: Double = 0
+        
+        for x in 0..<pixelWidth {
+            for y in 0..<pixelHeight {
+                
+                let scaledX = CGFloat(x) * image.scale
+                let scaledY = CGFloat(y) * image.scale
+                
+                let point = CGPoint(x: scaledX, y: scaledY)
+                let pixelInfo: Int = ((pixelWidth * Int(point.y)) + Int(point.x)) * 4
+                
+                let gray = Double(data[pixelInfo]) / 255.0
+                let alpha = Double(data[pixelInfo + 3]) / 255.0
+                
+                guard (gray != 0) else { continue }
+                
+                graySum += gray
+                alphaSum += alpha
+                count += 1
+            }
+        }
+        
+        if count > 0 {
+            let color = UIColor(red: graySum / Double(count), green: graySum / Double(count), blue: graySum / Double(count), alpha: graySum / Double(count))
+            
+            eyebrowColor = color
         }
     }
     
@@ -228,11 +293,16 @@ class ColorAnalysis: ObservableObject {
         guard let leftPupilPoint = leftPupil.first else { return }
         guard let rightPupilPoint = rightPupil.first else { return }
         
+        guard let leftEyebrow = observation.landmarks?.leftEyebrow?.pointsInImage(imageSize: inputImage.size) else { return }
+        guard let rightEyebrow = observation.landmarks?.rightEyebrow?.pointsInImage(imageSize: inputImage.size) else { return }
+        
         let boundingBox = observation.boundingBox
         
         getSkin(faceContour: faceContour, outerLips: outerLips, nose: nose, boundingBox: boundingBox)
         
         getEye(leftEye: leftEye, leftPupilPoint: leftPupilPoint, rightEye: rightEye, rightPupilPoint: rightPupilPoint)
+        
+        getEyebrow(leftEyebrow: leftEyebrow, rightEyebrow: rightEyebrow)
         
         getHair(facePoints: faceContour)
     }
@@ -277,7 +347,7 @@ class ColorAnalysis: ObservableObject {
                 }
             }
         }
-
+        
         for i in 0..<rightEye.count {
             if i == 0 {
                 rightEyeMaxY = leftEye[i].y
@@ -308,6 +378,35 @@ class ColorAnalysis: ObservableObject {
         let rightRadius = rightIrisRadius * 0.05
         
         createEyeImageMask(leftIrisPoints: leftIrisPoints, leftRadius: leftRadius, rightIrisPoints: rightIrisPoints, rightRadius: rightRadius)
+    }
+    
+    private func getEyebrow(leftEyebrow: [CGPoint], rightEyebrow: [CGPoint]) {
+        
+        let leftEyebrowPoint = CGPoint(x: (leftEyebrow[1].x + leftEyebrow[4].x)/2, y: (leftEyebrow[1].y + leftEyebrow[4].y)/2)
+        let leftRadius = (leftEyebrow[1].y - leftEyebrow[2].y)*0.3
+        
+        let rightEyebrowPoint = CGPoint(x: (rightEyebrow[1].x + rightEyebrow[4].x)/2, y: (rightEyebrow[1].y + rightEyebrow[4].y)/2)
+        let rightRadius = (rightEyebrow[1].y - rightEyebrow[2].y)*0.3
+        
+        createEyebrowImageMask(leftEyebrowPoint: leftEyebrowPoint, leftRadius: leftRadius, righteyebrowPoint: rightEyebrowPoint, rightRadius: rightRadius)
+    }
+    
+    private func createEyebrowImageMask(leftEyebrowPoint: CGPoint, leftRadius: CGFloat, righteyebrowPoint: CGPoint, rightRadius: CGFloat) {
+        
+        let leftEyebrow = CGPoint(x: leftEyebrowPoint.x, y: (inputImage.size.height - leftEyebrowPoint.y))
+        let rightEyebrow = CGPoint(x: righteyebrowPoint.x, y: (inputImage.size.height - righteyebrowPoint.y))
+        
+        var path = Path()
+        
+        path.addArc(center: leftEyebrow, radius: leftRadius, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 360), clockwise: true)
+        path.closeSubpath()
+        path.addArc(center: rightEyebrow, radius: rightRadius, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 360), clockwise: true)
+        path.closeSubpath()
+        
+        DispatchQueue.main.async {
+            self.renderEybrowImage(path: path)
+        }
+        
     }
     
     private func createEyeImageMask(leftIrisPoints: [CGPoint], leftRadius: CGFloat, rightIrisPoints: [CGPoint], rightRadius: CGFloat) {
@@ -478,5 +577,17 @@ class ColorAnalysis: ObservableObject {
                 }))
         
         hairColorImage = render.uiImage
+    }
+    
+    @MainActor private func renderEybrowImage(path: Path) {
+        let render = ImageRenderer(content:
+                                     
+            Image(uiImage: grayScaleImage ?? inputImage)
+                .frame(width: inputImage.size.width, height: inputImage.size.height)
+                .mask(alignment: .center, {
+                    FaceContourShape(facePath: path)
+                }))
+        
+        eyebrowColorImage = render.uiImage
     }
 }

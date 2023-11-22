@@ -34,13 +34,19 @@ struct ImageTypeSelection: View {
                         .scaledToFit()
                         .padding()
                     
-                    if let hairContrast = colorAnalysis.hairContrast, let eyeContrast = colorAnalysis.eyeContrast {
-                        HStack{
-                            Text("Hair Contrast: \(hairContrast)")
-                            Text("Eye Contrast: \(eyeContrast)")
-                        }
+                    
                         
+                    switch colorAnalysis.contrast {
+                    case 0:
+                        Text("Contraste: Baixo")
+                    case 1:
+                        Text("Contraste: Médio")
+                    case 2:
+                        Text("Contraste: Alto")
+                    default:
+                        Text("Contraste não determinado")
                     }
+                        
                     
                     if let skinColor = colorAnalysis.skinTone {
                         
@@ -53,6 +59,7 @@ struct ImageTypeSelection: View {
                             
                             colorAnalysis.inputImage = image
                             colorAnalysis.analysis()
+
                             
                             //                            segmentation.inputImage = image
                             //                            segmentation.segmentImage()
