@@ -26,6 +26,7 @@
 		A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FF2AF286C4004B25F8 /* TabBarView.swift */; };
 		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
 		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
+		A3D3E1802B0E277C00C1CBD6 /* ColorsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3E17F2B0E277C00C1CBD6 /* ColorsGridCell.swift */; };
 		A3F76D092AFDC40900E1AF44 /* LoadingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76D082AFDC40900E1AF44 /* LoadingInfoView.swift */; };
 		BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */; };
 		BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */; };
@@ -55,6 +56,7 @@
 		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
 		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A3D3E17F2B0E277C00C1CBD6 /* ColorsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGridCell.swift; sourceTree = "<group>"; };
 		A3F76D082AFDC40900E1AF44 /* LoadingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingInfoView.swift; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataModel.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */,
 				BDC19B732AEAB07D00FA74F7 /* ImageTypeSelection.swift */,
 				BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */,
+				A3D3E17F2B0E277C00C1CBD6 /* ColorsGridCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
+				A3D3E1802B0E277C00C1CBD6 /* ColorsGridCell.swift in Sources */,
 				BDC19B762AEAB0A100FA74F7 /* ImagePicker.swift in Sources */,
 				A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */,
 				A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */,
