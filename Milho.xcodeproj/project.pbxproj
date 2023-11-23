@@ -27,6 +27,12 @@
 		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
 		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
 		A3F76D092AFDC40900E1AF44 /* LoadingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76D082AFDC40900E1AF44 /* LoadingInfoView.swift */; };
+		BD120C312B024A6100970B57 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD120C302B024A6100970B57 /* TemperatureView.swift */; };
+		BD120C332B024DFF00970B57 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD120C322B024DFF00970B57 /* CheckboxStyle.swift */; };
+		BD809A302B026C0100A9E66F /* ManualScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809A2F2B026C0100A9E66F /* ManualScreenView.swift */; };
+		BDA109DE2B07FD6600188763 /* ColorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA109DD2B07FD6600188763 /* ColorsData.swift */; };
+		BDA109E02B0CDFAA00188763 /* ImageComparisonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA109DF2B0CDFAA00188763 /* ImageComparisonTableCell.swift */; };
+		BDBFED9A2B064CE6003EF7E0 /* ManualTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBFED992B064CE6003EF7E0 /* ManualTest.swift */; };
 		BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */; };
 		BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */; };
 		BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */; };
@@ -56,6 +62,12 @@
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
 		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A3F76D082AFDC40900E1AF44 /* LoadingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingInfoView.swift; sourceTree = "<group>"; };
+		BD120C302B024A6100970B57 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		BD120C322B024DFF00970B57 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		BD809A2F2B026C0100A9E66F /* ManualScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualScreenView.swift; sourceTree = "<group>"; };
+		BDA109DD2B07FD6600188763 /* ColorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsData.swift; sourceTree = "<group>"; };
+		BDA109DF2B0CDFAA00188763 /* ImageComparisonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCell.swift; sourceTree = "<group>"; };
+		BDBFED992B064CE6003EF7E0 /* ManualTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTest.swift; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B6F2AEAB02100FA74F7 /* CameraDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataModel.swift; sourceTree = "<group>"; };
 		BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionButton.swift; sourceTree = "<group>"; };
@@ -94,6 +106,7 @@
 		530986DB2ACC40C20068D4A2 /* Milho */ = {
 			isa = PBXGroup;
 			children = (
+				BD120C2E2B0249EF00970B57 /* ManualScreen */,
 				A37DDDC72AF9178100ADE49C /* Info.plist */,
 				530986DC2ACC40C20068D4A2 /* MilhoApp.swift */,
 				5381C9CC2AFBAF64006A731C /* LoadingScreen */,
@@ -203,6 +216,43 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BD120C2E2B0249EF00970B57 /* ManualScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDBFED9B2B064DA3003EF7E0 /* Model */,
+				BD120C2F2B024A2F00970B57 /* View */,
+			);
+			path = ManualScreen;
+			sourceTree = "<group>";
+		};
+		BD120C2F2B024A2F00970B57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD120C302B024A6100970B57 /* TemperatureView.swift */,
+				BD809A2F2B026C0100A9E66F /* ManualScreenView.swift */,
+				BDA109DF2B0CDFAA00188763 /* ImageComparisonTableCell.swift */,
+				BDA109E12B0CF6F800188763 /* ViewModel */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDA109E12B0CF6F800188763 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDBFED992B064CE6003EF7E0 /* ManualTest.swift */,
+				BD120C322B024DFF00970B57 /* CheckboxStyle.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BDBFED9B2B064DA3003EF7E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDA109DD2B07FD6600188763 /* ColorsData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,25 +331,31 @@
 				BDC19B742AEAB07D00FA74F7 /* ImageTypeSelection.swift in Sources */,
 				536F63262AFA5AEA004E5A84 /* LoadingResultsView.swift in Sources */,
 				A3F76D092AFDC40900E1AF44 /* LoadingInfoView.swift in Sources */,
+				BDA109E02B0CDFAA00188763 /* ImageComparisonTableCell.swift in Sources */,
 				536F63222AFA5A97004E5A84 /* LoadingItemCell.swift in Sources */,
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
 				536F63282AFA5B0E004E5A84 /* NegativeFeedbackView.swift in Sources */,
 				536F632C2AFA5B6B004E5A84 /* ResultsView.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
+				BD809A302B026C0100A9E66F /* ManualScreenView.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */,
 				BDC19B702AEAB02100FA74F7 /* CameraDataModel.swift in Sources */,
 				53C4F8682AEFD48D0097A8E6 /* ColorAnalysis.swift in Sources */,
+				BDBFED9A2B064CE6003EF7E0 /* ManualTest.swift in Sources */,
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
 				BDC19B762AEAB0A100FA74F7 /* ImagePicker.swift in Sources */,
 				A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */,
+				BD120C312B024A6100970B57 /* TemperatureView.swift in Sources */,
 				A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */,
+				BDA109DE2B07FD6600188763 /* ColorsData.swift in Sources */,
 				536F632A2AFA5B46004E5A84 /* PositiveFeedbackView.swift in Sources */,
 				A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */,
 				530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */,
 				536F63242AFA5ABD004E5A84 /* LoadingImage.swift in Sources */,
+				BD120C332B024DFF00970B57 /* CheckboxStyle.swift in Sources */,
 				A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho\"";
-				DEVELOPMENT_TEAM = NL8Y444HCT;
+				DEVELOPMENT_TEAM = R76485F3LM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
@@ -474,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Milho\"";
-				DEVELOPMENT_TEAM = J3D6H27WWS;
+				DEVELOPMENT_TEAM = R76485F3LM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;

@@ -50,7 +50,7 @@ struct PersonalColorTestChooserView: View {
             }
             
             NavigationLink {
-                ImageTypeSelection()
+                ManualTest()
             } label: {
                 ZStack {
                     RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
