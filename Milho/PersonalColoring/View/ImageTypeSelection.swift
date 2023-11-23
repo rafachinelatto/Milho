@@ -25,8 +25,8 @@ struct ImageTypeSelection: View {
     
     var body: some View {
         ZStack {
+            
             VStack {
-                
                 
                 if let image = imageSelected {
                     Image(uiImage: image)
@@ -70,6 +70,8 @@ struct ImageTypeSelection: View {
                             
                         }
                         .padding()
+                        
+                        
                     }
 
                 }
@@ -100,6 +102,8 @@ struct ImageTypeSelection: View {
             if showImagePicker {
                 ImagePicker(selectedImage: $imageSelected, isVisible: $showImagePicker, sourceType: sourceType)
             }
+            
+            
         }
         .navigationTitle("Coloração pessoal")
         .navigationBarTitleDisplayMode(.inline)
