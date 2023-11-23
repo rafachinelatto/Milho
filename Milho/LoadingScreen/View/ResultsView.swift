@@ -9,21 +9,37 @@ import SwiftUI
 
 struct ResultsView: View {
     
-    @AppStorage("testCompleted") var testCompleted: Bool?
+    @State private var redoTest = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        NavigationView {
-            
-            ResultsListView()
-            
-            Button(action: {
-                testCompleted = true
-            }, label: {
-                Text("Fazer o teste novamente")
-            })
-            .frame(width: 100, height: 200)
-            .buttonStyle(.borderedProminent)
+        
+        if redoTest {
+            NavigationView {
+                PersonalColorTestChooserView()
+            }
         }
+        else {
+            List {
+                
+                ResultsListView()
+                
+                Button(action: {
+                    redoTest = true
+                    self.presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Text("Realizar o teste novamente")
+                        .frame(maxWidth: .infinity)
+                })
+                
+                .buttonStyle(.borderedProminent)
+                .listRowBackground(Color(.accent))
+            }
+            .navigationTitle("Coloração pessoal")
+            .navigationBarTitleDisplayMode(.automatic)
+        }
+
+        
     }
 }
 

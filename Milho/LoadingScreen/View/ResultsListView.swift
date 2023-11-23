@@ -17,9 +17,9 @@ struct ResultsListView: View {
     
     var body: some View {
         
-            List {
-                
-                Section {
+        
+            Section {
+                VStack (spacing: 24) {
                     Image("primaveraClara")
                         .padding(.top)
                     
@@ -28,22 +28,30 @@ struct ResultsListView: View {
                         .font(.body)
                         .font(.system(size: 17))
                 }
-                .listRowSeparator(.hidden)
-                
-                Section ("MELHORES CORES") {
-                    ColorsGridCell(colors: colors)
-                }
-                
-                Section ("TONS NEUTROS") {
-                    ColorsGridCell(colors: neutral)
-                }
-                
-                Section ("ACESSÓRIOS") {
-                    ColorsGridCell(colors: accessories)
-                }
-                
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .frame(alignment: .center)
             }
-            .background(Color(.secondarySystemBackground))
+            
+            .listRowBackground(Color(.clear))
+            //.padding(.horizontal)
+            .listRowSeparator(.hidden)
+            
+            Section ("MELHORES CORES") {
+                ColorsGridCell(colors: colors)
+            }
+            //.padding(.horizontal)
+            
+            Section ("TONS NEUTROS") {
+                ColorsGridCell(colors: neutral)
+            }
+            //.padding(.horizontal)
+            
+            Section ("ACESSÓRIOS") {
+                ColorsGridCell(colors: accessories)
+            }
+        
+        
+        
     }
 }
 

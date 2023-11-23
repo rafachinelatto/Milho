@@ -10,30 +10,31 @@ struct TabBar: View {
     
     @State private var selectedTab = 0
     @AppStorage("isOnboarding") var isOnboarding: Bool?
-    @AppStorage("testCompleted") var testCompleted: Bool = false
+
+//    @State var colorTestCompleted: Bool = false
     
     var body: some View {
         TabView(selection: $selectedTab,
                 content:  {
             
-            if testCompleted {
-                ResultsView()
-                    .tabItem {
-                        
-                        Text("Coloração pessoal")
-                        Image(systemName: "swatchpalette.fill")
-                        
-                    }.tag(1)
-            }
-            else {
-                PersonalColoringTabItem()
-                    .tabItem {
-                        
-                        Text("Coloração pessoal")
-                        Image(systemName: "swatchpalette.fill")
-                        
-                    }.tag(1)
-            }
+            //            if colorTestCompleted {
+            //                ResultsView()
+            //                    .tabItem {
+            //
+            //                        Text("Coloração pessoal")
+            //                        Image(systemName: "swatchpalette.fill")
+            //
+            //                    }.tag(1)
+            //            }
+            //            else {
+            PersonalColoringTabItem()
+                .tabItem {
+                    
+                    Text("Coloração pessoal")
+                    Image(systemName: "swatchpalette.fill")
+                    
+                }.tag(1)
+//        }
                 
             
             Text("Aba de Estilos")

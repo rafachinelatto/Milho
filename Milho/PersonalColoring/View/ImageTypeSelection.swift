@@ -9,6 +9,7 @@ import SwiftUI
 import SimpleMatrixKit
 
 struct ImageTypeSelection: View {
+    
     @StateObject var homeData = ImageTypeViewModel()
     @ObservedObject var segmentation = ImageSegmentation()
     @ObservedObject var imageQuality = FaceImageQuality()
@@ -23,7 +24,10 @@ struct ImageTypeSelection: View {
     @State var pixelDataArray: [UIColor] = []
     @State var pixelNumber: Float = 0
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
+        
         ZStack {
             
             VStack {
@@ -112,6 +116,6 @@ struct ImageTypeSelection: View {
     
 }
 
-#Preview {
-    ImageTypeSelection()
-}
+//#Preview {
+//    ImageTypeSelection(colorTestCompleted: <#T##Binding<Bool>#>)
+//}

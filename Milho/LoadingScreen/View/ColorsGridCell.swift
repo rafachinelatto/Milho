@@ -38,7 +38,6 @@ struct ColorsGridCell: View {
                                     .frame(width: 44, height: 44)
                                     .foregroundStyle(Color(hex: colors[color]))
                                     .padding(.top)
-                                    .padding(.bottom)
                             }
                         })
                     }
@@ -75,7 +74,7 @@ struct ColorsGridCell: View {
                 //.padding(.trailing)
                 //.padding(.bottom)
             }
-            .background()
+            //.background()
             
         Spacer()
         }
