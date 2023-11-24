@@ -9,8 +9,7 @@ import SwiftUI
 
 struct PositiveFeedbackView: View {
     
-    @AppStorage("colorTestCompleted") var colorTestCompleted: Bool?
-    
+    @AppStorage("result") var result: Bool?
     let rectangles = [1,2,3,4,5,6]
     
     var body: some View {
@@ -39,16 +38,13 @@ struct PositiveFeedbackView: View {
                             }
                         }
                     }
-                NavigationLink {
-                    ResultsView()
+                Button {
+                    result = true
                 } label: {
                     Text("Ver paleta de cores completa")
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height/20)
                 }
                 .buttonStyle(.borderedProminent)
-            }
-            .onTapGesture {
-                colorTestCompleted = true
             }
             .padding()
                 

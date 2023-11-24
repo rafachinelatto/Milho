@@ -24,16 +24,16 @@ struct ResultsView: View {
                 
                 ResultsListView()
                 
-                Button(action: {
-                    redoTest = true
-                    self.presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Text("Realizar o teste novamente")
-                        .frame(maxWidth: .infinity)
-                })
-                
-                .buttonStyle(.borderedProminent)
-                .listRowBackground(Color(.accent))
+//                Button(action: {
+//                    redoTest = true
+//                    self.presentationMode.wrappedValue.dismiss()
+//                }, label: {
+//                    Text("Realizar o teste novamente")
+//                        .frame(maxWidth: .infinity)
+//                })
+//                
+//                .buttonStyle(.borderedProminent)
+//                .listRowBackground(Color(.accent))
             }
             .navigationTitle("Coloração pessoal")
             .navigationBarTitleDisplayMode(.automatic)

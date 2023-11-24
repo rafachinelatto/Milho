@@ -12,7 +12,7 @@ struct PersonalColoringTabItem: View {
     @AppStorage("isOnboarding") var isOnboarding: Bool?
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 
                 Spacer()

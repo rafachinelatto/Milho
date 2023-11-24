@@ -10,16 +10,18 @@ import SwiftUI
 struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var selectedImage : UIImage?
-    @Binding var isVisible: Bool
+    @Binding var imageWasSelected: Bool
+    @Environment(\.presentationMode) private var presentationMode
+//    @Binding var isVisible: Bool
     var sourceType: Int
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self, isVisible: $isVisible)
+        Coordinator(parent: self)
     }
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
-        picker.allowsEditing = true
+        picker.allowsEditing = sourceType == 1 ? true : false
         picker.sourceType = sourceType == 1 ? .photoLibrary : .camera
         picker.delegate = context.coordinator
         
@@ -30,13 +32,10 @@ struct ImagePicker: UIViewControllerRepresentable {
         
     }
     
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    final class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         var parent: ImagePicker
         
-        @Binding var isVisible: Bool
-        
-        init(parent: ImagePicker, isVisible: Binding<Bool>) {
-            _isVisible = isVisible
+        init(parent: ImagePicker) {
             self.parent = parent
         }
         
@@ -44,13 +43,9 @@ struct ImagePicker: UIViewControllerRepresentable {
             
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 parent.selectedImage = image
+                parent.imageWasSelected = true
             }
-            
-            isVisible = false
-        }
-        
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            isVisible = false
+            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
