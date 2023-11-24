@@ -21,7 +21,7 @@ struct LoadingItemCell: View {
             Image(systemName: "checkmark")
                 .foregroundStyle(.gray)
         } else {
-            ProgressView(value: progress, total: time)
+            ProgressView()
                 .font(Font.custom("SF Pro", size: 17))
                 .progressViewStyle(.circular)
                 .onAppear {

@@ -8,29 +8,46 @@
 import SwiftUI
 import Vision
 
+enum Seasons {
+    case Inverno
+    case Verão
+    case Outono
+    case Primavera
+}
+
 class ColorAnalysis: ObservableObject {
+    
+    enum State {
+        case idle
+        case loading
+        case failed
+        case loaded
+    }
+    
+    @Published private(set) var state = State.idle
+    
     var inputImage: UIImage = UIImage()
     
-    @Published var skinTone: UIColor?
-    @Published var contrast: Int?   // Informação do contraste da pele: 0 -> baixo, 1 -> médio, 2 -> alto.
+
+    var season: Seasons?    // Informação sobre o ton da pele, podendo ser Verão, Inverno, Outono ou Primavera
+    var contrast: Int?      // Informação do contraste da pele: 0 -> baixo, 1 -> médio, 2 -> alto.
     
-    var skinToneImage: UIImage?
-    var grayScaleImage: UIImage?
-    var eyeColorImage: UIImage?
-    var hairColorImage: UIImage?
-    @Published var eyebrowColorImage: UIImage?
-    var eyeColor: UIColor?
-    var hairColor: UIColor?
-    var eyebrowColor: UIColor?
+    private var skinTone: UIColor?
+    private var skinToneImage: UIImage?
+    private var grayScaleImage: UIImage?
+    private var eyeColorImage: UIImage?
+    private var hairColorImage: UIImage?
+    private var eyebrowColorImage: UIImage?
+    private var eyeColor: UIColor?
+    private var hairColor: UIColor?
+    private var eyebrowColor: UIColor?
     
     func analysis() {
-        getPoints()
-        getSkinColor()
-        grayScale()
-        getEyeColor()
-        getHairColor()
-        getEyebrowColor()
-        getContrastRate()
+        
+        DispatchQueue.main.async {
+            self.grayScale()
+            self.getPoints()
+        }
     }
     
     private func getContrastRate() {
@@ -59,7 +76,7 @@ class ColorAnalysis: ObservableObject {
         print("cabelo: \(hair)")
         print("olho: \(eye)")
         print("sombrancelha: \(eyebrow)")
-        print("pele: \(skinToneGrayScale)")
+        print("pele: \(red) \(blue)")
         
         
         if (faceContrast >= 0) && (faceContrast <= 3) {
@@ -75,6 +92,24 @@ class ColorAnalysis: ObservableObject {
         if let contrast = self.contrast {
             print(contrast)
         }
+        self.state = .loaded
+        
+        let proportion = red/blue
+        
+        if (proportion >= 0 && proportion <= 1.3) {
+            self.season = .Inverno
+        }
+        else if (proportion > 1.3 && proportion <= 1.5) {
+            self.season = .Verão
+        }
+        else if (proportion > 1.5 && proportion <= 1.7) {
+            self.season = .Outono
+        }
+        else {
+            self.season = .Primavera
+        }
+        
+        print(self.season ?? .Inverno)
     }
     
     private func getSkinColor() {
@@ -254,7 +289,7 @@ class ColorAnalysis: ObservableObject {
         let requestHandler = VNImageRequestHandler(cgImage: image, orientation: imageOrientation ,options: [:])
         
         // Executa de forma assíncrona o request.
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.main.async {
             do {
                 try requestHandler.perform([request])
             } catch let error as NSError {
@@ -541,6 +576,7 @@ class ColorAnalysis: ObservableObject {
         guard let cgOutputImage = contex.createCGImage(outputImage, from: outputImage.extent) else { return }
         
         grayScaleImage = UIImage(cgImage: cgOutputImage, scale: inputImage.scale, orientation: inputImage.imageOrientation)
+        
     }
     
     
@@ -553,6 +589,7 @@ class ColorAnalysis: ObservableObject {
                 }))
         
         skinToneImage = render.uiImage
+        getSkinColor()
     }
     
     @MainActor private func renderEyeImage(path: Path) {
@@ -565,6 +602,7 @@ class ColorAnalysis: ObservableObject {
                 }))
         
         eyeColorImage = render.uiImage
+        getEyeColor()
     }
     
     @MainActor private func renderHairImage(path: Path) {
@@ -577,6 +615,8 @@ class ColorAnalysis: ObservableObject {
                 }))
         
         hairColorImage = render.uiImage
+        getHairColor()
+        getContrastRate()
     }
     
     @MainActor private func renderEybrowImage(path: Path) {
@@ -589,5 +629,6 @@ class ColorAnalysis: ObservableObject {
                 }))
         
         eyebrowColorImage = render.uiImage
+        getEyebrowColor()
     }
 }

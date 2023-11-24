@@ -11,6 +11,7 @@ import SwiftUI
 struct MilhoApp: App {
     
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @AppStorage("result") var result: Bool = false
     
     var body: some Scene {
         WindowGroup {

@@ -9,19 +9,41 @@ import SwiftUI
 struct TabBar: View {
     
     @State private var selectedTab = 0
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
+   //@AppStorage("isOnboarding") var isOnboarding: Bool?
+    @AppStorage("result") var result: Bool?
     
     var body: some View {
         TabView(selection: $selectedTab,
                 content:  {
             
-            PersonalColoringTabItem()
-                .tabItem {
-                    
-                    Text("Coloração pessoal")
-                    Image(systemName: "swatchpalette.fill")
-                    
-                }.tag(1)
+            if let result = result {
+                if !result {
+                    PersonalColoringTabItem()
+                        .tabItem {
+                            
+                            Text("Coloração pessoal")
+                            Image(systemName: "swatchpalette.fill")
+                            
+                        }.tag(1)
+                } else {
+                    ResultsView()
+                        .tabItem {
+                            
+                            Text("Coloração pessoal")
+                            Image(systemName: "swatchpalette.fill")
+                            
+                        }.tag(1)
+                }
+            } else {
+                PersonalColoringTabItem()
+                    .tabItem {
+                        
+                        Text("Coloração pessoal")
+                        Image(systemName: "swatchpalette.fill")
+                        
+                    }.tag(1)
+            }
+            
             
             Text("Aba de Estilos")
                 .tabItem {
