@@ -64,7 +64,7 @@ let paletteList: [ColorPalette] = [
         ].sorted(by: >),
         accessoriesColors: [
             HexColor(hexCode: "E0D8DD"), HexColor(hexCode: "F9E193")
-        ].sorted(by: >)
+        ].sorted(by: <)
     ),
     
     //Primavera Clara

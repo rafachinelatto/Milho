@@ -25,20 +25,18 @@ struct ResultsListView: View {
             Section {
                 VStack (spacing: 24) {
                     Image(palette.backgroundImage)
-                        .padding(.top)
                     
                     Text(palette.description)
-                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity)
                         .multilineTextAlignment(.center)
                         .font(.body)
                         .font(.system(size: 17))
+                        .padding(.horizontal, UIScreen.main.bounds.width/10)
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .frame(alignment: .center)
             }
-            
             .listRowBackground(Color(.clear))
-            //.padding(.horizontal)
             .listRowSeparator(.hidden)
             
             Section ("MELHORES CORES") {

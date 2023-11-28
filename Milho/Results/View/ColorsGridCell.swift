@@ -8,8 +8,6 @@ struct ColorsGridCell: View {
     
     @State private var show = false
     
-//    let colors1 = ["F9E585", "F18B63", "F18B80", "71C661", "4FB9E3", "C79AE5", "FCF79D", "F6BF7C", "F4C0C6", "ED6362", "F195AF", "B0E19C", "4AAD81", "7BE1D2", "46A3A4", "CDE0FB", "A7BDEF", "A0D9F6", "B9B6E5", "7B64C1", "583C9B", "975DA9"]
-    
     var colors: [HexColor]
     
     let columns = Array(repeating: GridItem(), count: 6)
@@ -18,11 +16,25 @@ struct ColorsGridCell: View {
    
         VStack {
             VStack {
-                if show == false {
-                    if colors.count > 6 {
+                if !show {                      // show = (show more : show less) variable
+                    
+                    // if disabled evaluate colors.count (number of colors inside a HexColor array)
+                    if colors.count <= 6 {
+                        let index = colors.count
+                        LazyVGrid(columns: columns, content: {      // load view with all colors
+                            ForEach (0 ..< index, id: \.self) {color in
+                                RoundedRectangle(cornerRadius: 8)
+                                    .frame(width: 44, height: 44)
+                                    .foregroundStyle(Color(hex: colors[color].hexCode))
+                                    .padding(.top)
+                                    //.padding(.bottom)
+                            }
+                        })
+                    }
+                    else {
                         let index = 6
-                        LazyVGrid(columns: columns, content: {
-                            ForEach (0..<index) {color in
+                        LazyVGrid(columns: columns, content: {      // load view with all colors
+                            ForEach (0 ..< index, id: \.self) {color in
                                 RoundedRectangle(cornerRadius: 8)
                                     .frame(width: 44, height: 44)
                                     .foregroundStyle(Color(hex: colors[color].hexCode))
@@ -30,26 +42,14 @@ struct ColorsGridCell: View {
                                     .padding(.bottom)
                             }
                         })
-                    } else {
-                        let index = colors.count
-                        LazyVGrid(columns: columns, content: {
-                            ForEach (0..<index) {color in
-                                RoundedRectangle(cornerRadius: 8)
-                                    .frame(width: 44, height: 44)
-                                    .foregroundStyle(Color(hex: colors[color].hexCode))
-                                    .padding(.top)
-                            }
-                        })
                     }
-                    
-                    //.padding(.leading)
-                    //.padding(.trailing)
+                // if show == true
                 } else {
-                    LazyVGrid(columns: columns, spacing: 8, content: {
+                    LazyVGrid(columns: columns, spacing: 8, content: {      // load view with all colors
                         ForEach (colors, id: \.self) {color in
                             RoundedRectangle(cornerRadius: 8)
                                 .frame(width: 44, height: 44)
-                                .foregroundStyle(Color(color.hexCode))
+                                .foregroundStyle(Color(hex: color.hexCode))
                                 .padding(.top)
                                 //.padding(.bottom)
                         }
@@ -57,7 +57,7 @@ struct ColorsGridCell: View {
                     //.padding()
                 }
                 
-                if colors.count > 6 {
+                if colors.count > 6 {   //button show more : show less appears if the number of colors is bigger than six
                     Button(action: {
                         show.toggle()
                     }, label: {
@@ -84,8 +84,15 @@ struct ColorsGridCell: View {
     
 }
 
-let colors1 = ["F9E585", "F18B63", "F18B80", "71C661", "4FB9E3", "C79AE5", "FCF79D", "F6BF7C", "F4C0C6", "ED6362", "F195AF", "B0E19C", "4AAD81", "7BE1D2", "46A3A4", "CDE0FB", "A7BDEF", "A0D9F6", "B9B6E5", "7B64C1", "583C9B", "975DA9"]
+let idealColors = paletteList[2].idealColors
+let neutralColors = paletteList[2].neutralColors
+let accessoriesColors = paletteList[2].accessoriesColors
 
-//#Preview {
-//    ColorsGridCell()
-//}
+
+#Preview {
+    VStack {
+        ColorsGridCell(colors: idealColors)
+        ColorsGridCell(colors: neutralColors)
+        ColorsGridCell(colors: accessoriesColors)
+    }
+}

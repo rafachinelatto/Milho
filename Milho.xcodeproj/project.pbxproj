@@ -139,10 +139,10 @@
 			children = (
 				53ACFF7D2B10CB4400A3A585 /* ColorsGridCell.swift */,
 				536F63292AFA5B46004E5A84 /* PositiveFeedbackView.swift */,
-				536F632B2AFA5B6B004E5A84 /* ResultsView.swift */,
 				536F63272AFA5B0E004E5A84 /* NegativeFeedbackView.swift */,
 				539EC1592B0F749E0070327B /* AnalyzingImageView.swift */,
 				53ACFF7F2B10CB8500A3A585 /* ResultsListView.swift */,
+				536F632B2AFA5B6B004E5A84 /* ResultsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
