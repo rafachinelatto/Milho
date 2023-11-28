@@ -7,22 +7,28 @@ import SwiftUI
 // .previewDisplayName("Insetgroup")
 struct ResultsListView: View {
     
-    let accessories = ["E0D8DD", "F9E193"]
+    //    let accessories = ["E0D8DD", "F9E193"]
+    //
+    //    let neutral = ["FBF7E2", "F3D5B7", "F9E8D6", "CFC2B2", "958B89", "8C6852"]
+    //
+    //    let colors = ["F9E585", "F18B63", "F18B80", "71C661", "4FB9E3", "C79AE5", "FCF79D", "F6BF7C", "F4C0C6", "ED6362", "F195AF", "B0E19C", "4AAD81", "7BE1D2", "46A3A4", "CDE0FB", "A7BDEF", "A0D9F6", "B9B6E5", "7B64C1", "583C9B", "975DA9"]
     
-    let neutral = ["FBF7E2", "F3D5B7", "F9E8D6", "CFC2B2", "958B89", "8C6852"]
+    @Binding var paletteNumber: Int
     
-    let colors = ["F9E585", "F18B63", "F18B80", "71C661", "4FB9E3", "C79AE5", "FCF79D", "F6BF7C", "F4C0C6", "ED6362", "F195AF", "B0E19C", "4AAD81", "7BE1D2", "46A3A4", "CDE0FB", "A7BDEF", "A0D9F6", "B9B6E5", "7B64C1", "583C9B", "975DA9"]
-    
+    var palette: ColorPalette {
+        paletteList[paletteNumber]
+    }
     
     var body: some View {
         
         
             Section {
                 VStack (spacing: 24) {
-                    Image("primaveraClara")
+                    Image(palette.backgroundImage)
                         .padding(.top)
                     
-                    Text("Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.")
+                    Text(palette.description)
+                        .padding(.horizontal)
                         .multilineTextAlignment(.center)
                         .font(.body)
                         .font(.system(size: 17))
@@ -36,17 +42,17 @@ struct ResultsListView: View {
             .listRowSeparator(.hidden)
             
             Section ("MELHORES CORES") {
-                ColorsGridCell(colors: colors)
+                ColorsGridCell(colors: palette.idealColors)
             }
             //.padding(.horizontal)
             
             Section ("TONS NEUTROS") {
-                ColorsGridCell(colors: neutral)
+                ColorsGridCell(colors: palette.neutralColors)
             }
             //.padding(.horizontal)
             
             Section ("ACESSÓRIOS") {
-                ColorsGridCell(colors: accessories)
+                ColorsGridCell(colors: palette.accessoriesColors)
             }
         
         
@@ -55,6 +61,6 @@ struct ResultsListView: View {
 }
 
 
-#Preview {
-    ResultsListView()
-}
+//#Preview {
+//    ResultsListView()
+//}

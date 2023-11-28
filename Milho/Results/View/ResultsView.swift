@@ -11,6 +11,7 @@ struct ResultsView: View {
     
     @State private var redoTest = false
     @Environment(\.presentationMode) var presentationMode
+    @State var paletteNumber: Int = 0
     
     var body: some View {
         
@@ -20,9 +21,16 @@ struct ResultsView: View {
             }
         }
         else {
+            
             List {
+                Button(action: {            // botão para passar para o proximo elemento do modelo de paletas, nao vai existir
+                    paletteNumber += 1
+                    paletteNumber = paletteNumber % 12
+                }, label: {
+                    Text("Próxima paleta")
+                })
                 
-                ResultsListView()
+                ResultsListView(paletteNumber: $paletteNumber)
                 
 //                Button(action: {
 //                    redoTest = true
@@ -37,6 +45,7 @@ struct ResultsView: View {
             }
             .navigationTitle("Coloração pessoal")
             .navigationBarTitleDisplayMode(.automatic)
+            //Spacer()
         }
 
         

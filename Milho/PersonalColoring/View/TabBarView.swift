@@ -25,6 +25,7 @@ struct TabBar: View {
                             Image(systemName: "swatchpalette.fill")
                             
                         }.tag(1)
+                    
                 } else {
                     ResultsView()
                         .tabItem {
