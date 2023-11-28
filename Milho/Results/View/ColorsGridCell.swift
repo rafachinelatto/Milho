@@ -58,28 +58,24 @@ struct ColorsGridCell: View {
                 }
                 
                 if colors.count > 6 {   //button show more : show less appears if the number of colors is bigger than six
-                    Button(action: {
-                        show.toggle()
-                    }, label: {
-                        HStack {
-                            Spacer()
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            show.toggle()
+                        }, label: {
                             Text(show ? "mostrar menos" : "mostrar mais")
                                 .foregroundColor(.accentColor)
                                 .font(.caption.lowercaseSmallCaps())
                                 .animation(nil, value: show)
-                        }
-                    })
+                        })
+                        .buttonStyle(.plain)
+                    }
                 }
-                
-                //.padding(.trailing)
-                //.padding(.bottom)
             }
-            //.background()
             
         Spacer()
         }
-            
-            //.padding()
     }
     
 }
