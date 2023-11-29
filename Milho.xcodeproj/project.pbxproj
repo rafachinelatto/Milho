@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530986DC2ACC40C20068D4A2 /* MilhoApp.swift */; };
 		530986E12ACC40C30068D4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530986E02ACC40C30068D4A2 /* Assets.xcassets */; };
+		532E56742B1405FA00DBDB58 /* ImageAnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532E56732B1405FA00DBDB58 /* ImageAnalysisViewModel.swift */; };
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
 		533B12E52AE6987300485B67 /* FaceImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E42AE6987300485B67 /* FaceImageQuality.swift */; };
@@ -48,6 +49,7 @@
 		530986D92ACC40C20068D4A2 /* Milho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530986DC2ACC40C20068D4A2 /* MilhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilhoApp.swift; sourceTree = "<group>"; };
 		530986E02ACC40C30068D4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		532E56732B1405FA00DBDB58 /* ImageAnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalysisViewModel.swift; sourceTree = "<group>"; };
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
 		533B12E42AE6987300485B67 /* FaceImageQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageQuality.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				53A585282B064D3000E25B25 /* ColorAnalysis.swift */,
+				532E56732B1405FA00DBDB58 /* ImageAnalysisViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				53E3067E2B10E93C00D9579C /* CheckboxStyle.swift in Sources */,
 				53ACFF7E2B10CB4400A3A585 /* ColorsGridCell.swift in Sources */,
 				539EC15A2B0F749E0070327B /* AnalyzingImageView.swift in Sources */,
+				532E56742B1405FA00DBDB58 /* ImageAnalysisViewModel.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
 				BDC19B762AEAB0A100FA74F7 /* ImagePicker.swift in Sources */,
 				A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */,

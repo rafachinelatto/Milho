@@ -11,26 +11,42 @@ struct AnalyzingImageView: View {
     
     var image: UIImage
     @ObservedObject var viewModel = ColorAnalysis()
+    @ObservedObject var viewModelV2 = ImageAnalysisViewModel()
     
     var body: some View {
-        switch viewModel.state {
-        case .idle:
-            Color.clear
-                .onAppear{
-                    viewModel.inputImage = image
-                    viewModel.analysis()
-                    
-                }
-        case .loading:
-            LoadingResultsView()
-                
-        case .failed:
-            NegativeFeedbackView()
+        VStack {
+            //            switch viewModel.state {
+            //            case .idle:
+            //                Color.clear
+            //                    .onAppear{
+            //                        DispatchQueue.main.async {
+            //                            viewModelV2.getColorPallet(image: image)
+            //                        }
+            //                    }
+            //            case .loading:
+            //                LoadingResultsView()
+            //
+            //            case .failed:
+            //                NegativeFeedbackView()
+            //
+            //            case .loaded:
+            //                PositiveFeedbackView()
+            //            }
             
-        case .loaded:
-            PositiveFeedbackView()
+            
+            if let skinColorImage = viewModelV2.skinColorImage {
+                Image(uiImage: skinColorImage)
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                Button("Ver imagem") {
+                    DispatchQueue.main.async {
+                        viewModelV2.getColorPallet(image: image)
+                    }
+                }
+            }
+            
         }
-    
     }
 }
 

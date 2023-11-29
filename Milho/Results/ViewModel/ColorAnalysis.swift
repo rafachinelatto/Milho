@@ -85,7 +85,7 @@ class ColorAnalysis: ObservableObject {
         print("cabelo: \(hair)")
         print("olho: \(eye)")
         print("sombrancelha: \(eyebrow)")
-        print("pele: \(red) \(blue)")
+        print("pele: \(red) \(green) \(blue)")
         
         
         if (faceContrast >= 0) && (faceContrast <= 3) {
