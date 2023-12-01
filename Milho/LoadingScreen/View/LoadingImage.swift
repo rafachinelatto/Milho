@@ -35,7 +35,7 @@ struct LoadingImage: View {
                 .font(Font.custom("SF Pro Rounded", size: 19)
                 .weight(.semibold))
                 .multilineTextAlignment(.center)
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
                 .padding()
                 .onReceive(textSwitchTimer) { _ in
                     self.activeImageIndex = (self.activeImageIndex + 1) % self.texts.count
