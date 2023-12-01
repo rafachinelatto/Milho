@@ -17,7 +17,7 @@ struct LoadingInfoView: View {
         VStack {
             ForEach (0..<constrains.count, id: \.self) {const in
                 HStack (spacing: 8){
-                    LoadingItemCell(time: times[const]*1.3)
+                    LoadingItemCell(time: times[const])
                     Text(constrains[const])
                     Spacer()
                 }

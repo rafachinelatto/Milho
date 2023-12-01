@@ -37,7 +37,7 @@ struct AnalyzingImageView: View {
             case .loading:
                 LoadingResultsView()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.2) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
                             state = .loaded
                         }
                     }
