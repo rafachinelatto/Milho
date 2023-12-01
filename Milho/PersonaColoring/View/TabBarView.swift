@@ -65,5 +65,8 @@ struct TabBar: View {
                     
                 }.tag(3)
         })
+        .onChange(of: paletteNumber) { oldValue, newValue in
+            result = true
+        }
     }
 }

@@ -8,21 +8,7 @@
 import SwiftUI
 import Vision
 
-enum Seasons: Int {
-    case primaveraPura = 0
-    case primaveraIntensa = 1
-    case primaveraClara = 2
-    case veraoPuro = 3
-    case veraoSuave = 4
-    case veraoClaro = 5
-    case outonoPuro = 6
-    case outonoSuave = 7
-    case outonoProfundo = 8
-    case invernoPuro = 9
-    case invernoIntenso = 10
-    case invernoProfundo = 11
-    
-}
+
 
 class ColorAnalysis: ObservableObject {
     

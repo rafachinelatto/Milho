@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PositiveFeedbackView: View {
     
+    @Environment(\.presentationMode) var presentationMode
     @AppStorage("paletteNumber") var paletteNumber: Int?
     @AppStorage("result") var result: Bool?
     //let rectangles = [1,2,3,4,5,6]
@@ -54,8 +55,13 @@ struct PositiveFeedbackView: View {
                         }
                     }
                 Button {
-                    result = true
+                    
+                    self.presentationMode.wrappedValue.dismiss()
+                    result = false
                     paletteNumber = paletteNumberResult
+                    
+//                    result = true
+//                    paletteNumber = paletteNumberResult
                 } label: {
                     Text("Ver paleta de cores completa")
                         .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height/20)
