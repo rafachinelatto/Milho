@@ -32,6 +32,12 @@
 		A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FF2AF286C4004B25F8 /* TabBarView.swift */; };
 		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
 		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
+		A3F150632B18A8DF00F228B7 /* StylesEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150622B18A8DF00F228B7 /* StylesEmptyStateView.swift */; };
+		A3F150652B18AA2400F228B7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150642B18AA2400F228B7 /* QuizView.swift */; };
+		A3F150672B18AAF500F228B7 /* QuizImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150662B18AAF400F228B7 /* QuizImageCell.swift */; };
+		A3F150692B18BE2200F228B7 /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150682B18BE2200F228B7 /* InfoSheetView.swift */; };
+		A3F1506B2B190AAF00F228B7 /* StyleFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1506A2B190AAF00F228B7 /* StyleFeedbackView.swift */; };
+		A3F1506D2B1912E700F228B7 /* StyleResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1506C2B1912E700F228B7 /* StyleResultsView.swift */; };
 		BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */; };
 		BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */; };
 		BDC19B742AEAB07D00FA74F7 /* ImageTypeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC19B732AEAB07D00FA74F7 /* ImageTypeSelection.swift */; };
@@ -66,6 +72,12 @@
 		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
 		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A3F150622B18A8DF00F228B7 /* StylesEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylesEmptyStateView.swift; sourceTree = "<group>"; };
+		A3F150642B18AA2400F228B7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		A3F150662B18AAF400F228B7 /* QuizImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizImageCell.swift; sourceTree = "<group>"; };
+		A3F150682B18BE2200F228B7 /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
+		A3F1506A2B190AAF00F228B7 /* StyleFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleFeedbackView.swift; sourceTree = "<group>"; };
+		A3F1506C2B1912E700F228B7 /* StyleResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleResultsView.swift; sourceTree = "<group>"; };
 		BDC19B6D2AEAAFE200FA74F7 /* ImageTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeViewModel.swift; sourceTree = "<group>"; };
 		BDC19B712AEAB05A00FA74F7 /* InitialSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSelectionButton.swift; sourceTree = "<group>"; };
 		BDC19B732AEAB07D00FA74F7 /* ImageTypeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeSelection.swift; sourceTree = "<group>"; };
@@ -106,21 +118,13 @@
 				530986DC2ACC40C20068D4A2 /* MilhoApp.swift */,
 				531663D12B177D7E0032AED1 /* LoadingScreen */,
 				531663DD2B1780660032AED1 /* Results */,
-				531663F12B1784C20032AED1 /* PersonaColoring */,
+				531663F12B1784C20032AED1 /* PersonalColoring */,
+				A3F150612B18A8A900F228B7 /* Styles */,
 				531663F92B1787860032AED1 /* Onboarding */,
-				53E6E49F2ACC50D3007CF1F8 /* View */,
 				533B12E12AE6965300485B67 /* Extensions */,
 				530986E02ACC40C30068D4A2 /* Assets.xcassets */,
-				530986E22ACC40C30068D4A2 /* Preview Content */,
 			);
 			path = Milho;
-			sourceTree = "<group>";
-		};
-		530986E22ACC40C30068D4A2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		531663D12B177D7E0032AED1 /* LoadingScreen */ = {
@@ -181,14 +185,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		531663F12B1784C20032AED1 /* PersonaColoring */ = {
+		531663F12B1784C20032AED1 /* PersonalColoring */ = {
 			isa = PBXGroup;
 			children = (
 				531663F42B1784EF0032AED1 /* Model */,
 				531663F32B1784E70032AED1 /* ViewModel */,
 				531663F22B1784D90032AED1 /* View */,
 			);
-			path = PersonaColoring;
+			path = PersonalColoring;
 			sourceTree = "<group>";
 		};
 		531663F22B1784D90032AED1 /* View */ = {
@@ -257,11 +261,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		53E6E49F2ACC50D3007CF1F8 /* View */ = {
+		A3F150612B18A8A900F228B7 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				A3F150622B18A8DF00F228B7 /* StylesEmptyStateView.swift */,
+				A3F150682B18BE2200F228B7 /* InfoSheetView.swift */,
+				A3F150642B18AA2400F228B7 /* QuizView.swift */,
+				A3F150662B18AAF400F228B7 /* QuizImageCell.swift */,
+				A3F1506A2B190AAF00F228B7 /* StyleFeedbackView.swift */,
+				A3F1506C2B1912E700F228B7 /* StyleResultsView.swift */,
 			);
-			path = View;
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,10 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F150672B18AAF500F228B7 /* QuizImageCell.swift in Sources */,
 				BDC19B742AEAB07D00FA74F7 /* ImageTypeSelection.swift in Sources */,
 				531663E62B1781530032AED1 /* ColorAnalysis.swift in Sources */,
 				531663DC2B177FC50032AED1 /* LoadingResultsView.swift in Sources */,
 				531663E82B17819B0032AED1 /* ColorsGridCell.swift in Sources */,
+				A3F150692B18BE2200F228B7 /* InfoSheetView.swift in Sources */,
 				531663F82B17855C0032AED1 /* FaceImageQuality.swift in Sources */,
 				531663DA2B177F6F0032AED1 /* LoadingItemCell.swift in Sources */,
 				531663D02B177C7E0032AED1 /* ColorExtension.swift in Sources */,
@@ -353,6 +365,9 @@
 				531663E42B1781290032AED1 /* AnalyzingImageView.swift in Sources */,
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
 				531663EC2B1782470032AED1 /* PositiveFeedbackView.swift in Sources */,
+				A3F150632B18A8DF00F228B7 /* StylesEmptyStateView.swift in Sources */,
+				A3F1506B2B190AAF00F228B7 /* StyleFeedbackView.swift in Sources */,
+				A3F150652B18AA2400F228B7 /* QuizView.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
 				BDC19B762AEAB0A100FA74F7 /* ImagePicker.swift in Sources */,
@@ -365,6 +380,7 @@
 				530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */,
 				531663EE2B1783280032AED1 /* ResultsListView.swift in Sources */,
 				A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */,
+				A3F1506D2B1912E700F228B7 /* StyleResultsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +514,8 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
-				DEVELOPMENT_TEAM = J3D6H27WWS;
+				DEVELOPMENT_ASSET_PATHS = "\"Milho\"";
+				DEVELOPMENT_TEAM = NL8Y444HCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Milho/Info.plist;
@@ -537,7 +553,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Milho/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Milho\"";
 				DEVELOPMENT_TEAM = J3D6H27WWS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

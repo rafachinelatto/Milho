@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "creativoStyle.svg",
+      "filename" : "criativoStyle.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "criativoStyle dark.svg",
+      "filename" : "criativoStyle 1.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
