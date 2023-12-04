@@ -27,6 +27,12 @@
 		531663FE2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531663FD2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift */; };
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
+		534BE60B2B1DF44300D543AD /* ColorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE60A2B1DF44300D543AD /* ColorsData.swift */; };
+		534BE60D2B1DF46500D543AD /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE60C2B1DF46500D543AD /* CheckboxStyle.swift */; };
+		534BE60F2B1DF47F00D543AD /* ManualTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE60E2B1DF47F00D543AD /* ManualTest.swift */; };
+		534BE6112B1DF4A800D543AD /* ImageComparisonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE6102B1DF4A800D543AD /* ImageComparisonTableCell.swift */; };
+		534BE6132B1DF4BC00D543AD /* ManualScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE6122B1DF4BC00D543AD /* ManualScreenView.swift */; };
+		534BE6152B1DF4E100D543AD /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE6142B1DF4E100D543AD /* TemperatureView.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
@@ -61,6 +67,12 @@
 		531663FD2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalysisViewModel.swift; sourceTree = "<group>"; };
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
+		534BE60A2B1DF44300D543AD /* ColorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsData.swift; sourceTree = "<group>"; };
+		534BE60C2B1DF46500D543AD /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		534BE60E2B1DF47F00D543AD /* ManualTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTest.swift; sourceTree = "<group>"; };
+		534BE6102B1DF4A800D543AD /* ImageComparisonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCell.swift; sourceTree = "<group>"; };
+		534BE6122B1DF4BC00D543AD /* ManualScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualScreenView.swift; sourceTree = "<group>"; };
+		534BE6142B1DF4E100D543AD /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 				A37DDDC72AF9178100ADE49C /* Info.plist */,
 				530986DC2ACC40C20068D4A2 /* MilhoApp.swift */,
 				531663D12B177D7E0032AED1 /* LoadingScreen */,
+				534BE6062B1DF41200D543AD /* ManualTest */,
 				531663DD2B1780660032AED1 /* Results */,
 				531663F12B1784C20032AED1 /* PersonaColoring */,
 				531663F92B1787860032AED1 /* Onboarding */,
@@ -260,6 +273,43 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		534BE6062B1DF41200D543AD /* ManualTest */ = {
+			isa = PBXGroup;
+			children = (
+				534BE6092B1DF42D00D543AD /* Model */,
+				534BE6082B1DF42600D543AD /* ViewModel */,
+				534BE6072B1DF42000D543AD /* View */,
+			);
+			path = ManualTest;
+			sourceTree = "<group>";
+		};
+		534BE6072B1DF42000D543AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				534BE6102B1DF4A800D543AD /* ImageComparisonTableCell.swift */,
+				534BE6122B1DF4BC00D543AD /* ManualScreenView.swift */,
+				534BE6142B1DF4E100D543AD /* TemperatureView.swift */,
+				534BE60E2B1DF47F00D543AD /* ManualTest.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		534BE6082B1DF42600D543AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				534BE60C2B1DF46500D543AD /* CheckboxStyle.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		534BE6092B1DF42D00D543AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				534BE60A2B1DF44300D543AD /* ColorsData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		53E6E49F2ACC50D3007CF1F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,18 +394,24 @@
 				531663E62B1781530032AED1 /* ColorAnalysis.swift in Sources */,
 				531663DC2B177FC50032AED1 /* LoadingResultsView.swift in Sources */,
 				531663E82B17819B0032AED1 /* ColorsGridCell.swift in Sources */,
+				534BE6132B1DF4BC00D543AD /* ManualScreenView.swift in Sources */,
+				534BE6152B1DF4E100D543AD /* TemperatureView.swift in Sources */,
 				531663F82B17855C0032AED1 /* FaceImageQuality.swift in Sources */,
 				531663DA2B177F6F0032AED1 /* LoadingItemCell.swift in Sources */,
 				531663D02B177C7E0032AED1 /* ColorExtension.swift in Sources */,
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
+				534BE60F2B1DF47F00D543AD /* ManualTest.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
+				534BE6112B1DF4A800D543AD /* ImageComparisonTableCell.swift in Sources */,
 				531663EA2B1781D60032AED1 /* NegativeFeedbackView.swift in Sources */,
 				531663F62B1785080032AED1 /* CameraDataModel.swift in Sources */,
 				531663F02B1783640032AED1 /* ResultsView.swift in Sources */,
 				531663E42B1781290032AED1 /* AnalyzingImageView.swift in Sources */,
 				BDC19B722AEAB05A00FA74F7 /* InitialSelectionButton.swift in Sources */,
+				534BE60B2B1DF44300D543AD /* ColorsData.swift in Sources */,
 				531663EC2B1782470032AED1 /* PositiveFeedbackView.swift in Sources */,
+				534BE60D2B1DF46500D543AD /* CheckboxStyle.swift in Sources */,
 				531663FE2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
