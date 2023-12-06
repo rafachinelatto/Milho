@@ -11,6 +11,8 @@ import SwiftUI
 struct MilhoApp: App {
     
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @AppStorage("result") var result: Bool = false
+    @StateObject var redoTest = RedoTest()
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +20,7 @@ struct MilhoApp: App {
                 PersonalColoring()
             } else {
                 TabBar()
+                    .environmentObject(redoTest)
             }
             
             }
