@@ -31,6 +31,7 @@ struct TabBar: View {
                             Image(systemName: "swatchpalette.fill")
                             
                         }.tag(1)
+                        .toolbar(.hidden, for: .tabBar)
                     
                 } else {
                     if let paletteNumber = paletteNumber {
@@ -41,6 +42,7 @@ struct TabBar: View {
                                 Image(systemName: "swatchpalette.fill")
                                 
                             }.tag(1)
+                            .toolbar(.hidden, for: .tabBar)
                     }
                 }
             } else {
@@ -51,24 +53,25 @@ struct TabBar: View {
                         Image(systemName: "swatchpalette.fill")
                         
                     }.tag(1)
+                    .toolbar(.hidden, for: .tabBar)
             }
             
             
-            Text("Aba de Estilos")
-                .tabItem {
-                    
-                    Text("Estilos")
-                    Image(systemName: "rectangle.fill.badge.person.crop")
-                    
-                }.tag(2)
-            
-            Text("Aba de Inspirações")
-                .tabItem {
-                    
-                    Text("Inspirações")
-                    Image(systemName: "wand.and.rays")
-                    
-                }.tag(3)
+//            Text("Aba de Estilos")
+//                .tabItem {
+//                    
+//                    Text("Estilos")
+//                    Image(systemName: "rectangle.fill.badge.person.crop")
+//                    
+//                }.tag(2)
+//            
+//            Text("Aba de Inspirações")
+//                .tabItem {
+//                    
+//                    Text("Inspirações")
+//                    Image(systemName: "wand.and.rays")
+//                    
+//                }.tag(3)
         })
         .onChange(of: redoTest.didRedoTest) {
             if redoTest.didRedoTest == true {
@@ -76,5 +79,7 @@ struct TabBar: View {
                 redoTest.didRedoTest = false
             }
         }
+        
+        
     }
 }

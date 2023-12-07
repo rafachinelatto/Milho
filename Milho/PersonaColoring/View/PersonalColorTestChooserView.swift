@@ -46,42 +46,43 @@ struct PersonalColorTestChooserView: View {
                     .padding()
                     
                 }
+                .frame(height: UIScreen.main.bounds.height/2.5)
                 
             }
             
-            NavigationLink {
-                ImageTypeSelection()
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
-                        .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
-                    VStack (spacing: 8){
-                        Image("testeManual")
-                            .scaledToFill()
-                            .frame(alignment: .trailing)
-                        
-                        HStack {
-                            Text("Realizar teste manual")
-                                .foregroundStyle(.primary)
-                                .font(.system(size: 19))
-                                .fontWeight(.medium)
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            Text("Escolha as cores que mais combinam com você e deixa que a gente faz o resto.")
-                                .foregroundStyle(.secondary)
-                                .fontWeight(.regular)
-                                .font(.system(size: 16))
-                                .multilineTextAlignment(.leading)
-                            Spacer()
-                        }
-                    }
-                    .padding()
-                    
-                }
-                
-            }
+//            NavigationLink {
+//                ImageTypeSelection()
+//            } label: {
+//                ZStack {
+//                    RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
+//                        .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
+//                    VStack (spacing: 8){
+//                        Image("testeManual")
+//                            .scaledToFill()
+//                            .frame(alignment: .trailing)
+//                        
+//                        HStack {
+//                            Text("Realizar teste manual")
+//                                .foregroundStyle(.primary)
+//                                .font(.system(size: 19))
+//                                .fontWeight(.medium)
+//                            Spacer()
+//                        }
+//                        
+//                        HStack {
+//                            Text("Escolha as cores que mais combinam com você e deixa que a gente faz o resto.")
+//                                .foregroundStyle(.secondary)
+//                                .fontWeight(.regular)
+//                                .font(.system(size: 16))
+//                                .multilineTextAlignment(.leading)
+//                            Spacer()
+//                        }
+//                    }
+//                    .padding()
+//                    
+//                }
+//                
+//            }
             
 
         }
