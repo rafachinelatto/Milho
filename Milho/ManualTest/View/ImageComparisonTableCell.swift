@@ -11,11 +11,13 @@ struct ImageComparisonTableCell: View {
     @State private var rectangleColorState: RectangleColorState = .color1
     @Binding var selectedState: Int
     var colors: [Color]
-    var image: UIImage?
+    var image: UIImage
     
     var body: some View {
         ZStack {
-            Image(.shoeLoading)
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
                 .frame(height: UIScreen.main.bounds.height * 0.27)
             
             VStack(alignment: .center, spacing: 0, content: {
@@ -66,4 +68,8 @@ struct ImageComparisonTableCell: View {
                 )
            }
      }
+}
+
+#Preview {
+    ImageComparisonTableCell(selectedState: .constant(1), colors: [.blue,.red], image: UIImage(named: "eu") ?? UIImage())
 }

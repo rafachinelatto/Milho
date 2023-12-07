@@ -16,13 +16,13 @@ enum RectangleColorState {
 struct ManualScreenView: View {
     @State private var rectangleColorState: RectangleColorState = .color1
     @State var selectedState: Int = 0
-    var image: UIImage?
+    var image: UIImage
     var colors: [Color]
     
     var body: some View {
         List {
                 Section {
-                    ImageComparisonTableCell(selectedState: $selectedState, colors: colors)
+                    ImageComparisonTableCell(selectedState: $selectedState, colors: colors, image: image)
                 }
                 .listRowSeparator(.hidden)
                 
@@ -45,5 +45,5 @@ struct ManualScreenView: View {
 }
 
 #Preview {
-    ManualScreenView(image: UIImage(named: "shoeLoading"), colors: [.black, .orange])
+    ManualScreenView(image: UIImage(named: "shoeLoading") ?? UIImage(), colors: [.black, .orange])
 }

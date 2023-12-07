@@ -12,12 +12,13 @@ struct ManualTest: View {
     @State private var manualCurrentTab = 1
     @State private var completeManualTest = false
     @AppStorage("isManual") var isManual: Bool?
+    var image: UIImage
     
     var body: some View {
         VStack {
             TabView (selection: $manualCurrentTab) {
                 ForEach (0..<5) {index in
-                    ManualScreenView(image: UIImage(named: "shoeLoading"), colors: colorsArray[index].colors)
+                    ManualScreenView(image: image, colors: colorsArray[index].colors)
                         .tag(index)
                 }
             }
@@ -46,5 +47,5 @@ struct ManualTest: View {
 
 
 #Preview {
-    ManualTest()
+    ManualTest(image: UIImage(named: "eu") ?? UIImage())
 }

@@ -45,7 +45,7 @@ struct TemperatureView: View {
                             onTemperatureChange(.color1)
                             selectedState = 0
                         }
-                  }
+                    }
             }
             
             Spacer()

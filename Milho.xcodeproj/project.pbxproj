@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530986DC2ACC40C20068D4A2 /* MilhoApp.swift */; };
 		530986E12ACC40C30068D4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530986E02ACC40C30068D4A2 /* Assets.xcassets */; };
+		530C23012B21F0E600AA9F65 /* TemperatureSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530C23002B21F0E600AA9F65 /* TemperatureSelectionView.swift */; };
 		531663D02B177C7E0032AED1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531663CF2B177C7E0032AED1 /* ColorExtension.swift */; };
 		531663D62B177F180032AED1 /* LoadingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531663D52B177F180032AED1 /* LoadingImage.swift */; };
 		531663D82B177F4D0032AED1 /* LoadingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531663D72B177F4D0032AED1 /* LoadingInfoView.swift */; };
@@ -33,6 +34,9 @@
 		534BE6112B1DF4A800D543AD /* ImageComparisonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE6102B1DF4A800D543AD /* ImageComparisonTableCell.swift */; };
 		534BE6132B1DF4BC00D543AD /* ManualScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE6122B1DF4BC00D543AD /* ManualScreenView.swift */; };
 		534BE6152B1DF4E100D543AD /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE6142B1DF4E100D543AD /* TemperatureView.swift */; };
+		539A1FBD2B20925500A8D694 /* ManualTestV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1FBC2B20925500A8D694 /* ManualTestV2.swift */; };
+		539A1FBF2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1FBE2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift */; };
+		539A1FC12B209D2500A8D694 /* ImageComparisonTableCellV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1FC02B209D2500A8D694 /* ImageComparisonTableCellV2.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
@@ -49,6 +53,7 @@
 		530986D92ACC40C20068D4A2 /* Milho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530986DC2ACC40C20068D4A2 /* MilhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilhoApp.swift; sourceTree = "<group>"; };
 		530986E02ACC40C30068D4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		530C23002B21F0E600AA9F65 /* TemperatureSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSelectionView.swift; sourceTree = "<group>"; };
 		531663CF2B177C7E0032AED1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		531663D52B177F180032AED1 /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
 		531663D72B177F4D0032AED1 /* LoadingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingInfoView.swift; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		534BE6102B1DF4A800D543AD /* ImageComparisonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCell.swift; sourceTree = "<group>"; };
 		534BE6122B1DF4BC00D543AD /* ManualScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualScreenView.swift; sourceTree = "<group>"; };
 		534BE6142B1DF4E100D543AD /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		539A1FBC2B20925500A8D694 /* ManualTestV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTestV2.swift; sourceTree = "<group>"; };
+		539A1FBE2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCellViewModel.swift; sourceTree = "<group>"; };
+		539A1FC02B209D2500A8D694 /* ImageComparisonTableCellV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCellV2.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -290,6 +298,9 @@
 				534BE6122B1DF4BC00D543AD /* ManualScreenView.swift */,
 				534BE6142B1DF4E100D543AD /* TemperatureView.swift */,
 				534BE60E2B1DF47F00D543AD /* ManualTest.swift */,
+				539A1FBC2B20925500A8D694 /* ManualTestV2.swift */,
+				539A1FC02B209D2500A8D694 /* ImageComparisonTableCellV2.swift */,
+				530C23002B21F0E600AA9F65 /* TemperatureSelectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				534BE60C2B1DF46500D543AD /* CheckboxStyle.swift */,
+				539A1FBE2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -397,10 +409,14 @@
 				534BE6132B1DF4BC00D543AD /* ManualScreenView.swift in Sources */,
 				534BE6152B1DF4E100D543AD /* TemperatureView.swift in Sources */,
 				531663F82B17855C0032AED1 /* FaceImageQuality.swift in Sources */,
+				539A1FBF2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift in Sources */,
+				539A1FC12B209D2500A8D694 /* ImageComparisonTableCellV2.swift in Sources */,
 				531663DA2B177F6F0032AED1 /* LoadingItemCell.swift in Sources */,
 				531663D02B177C7E0032AED1 /* ColorExtension.swift in Sources */,
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
+				530C23012B21F0E600AA9F65 /* TemperatureSelectionView.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
+				539A1FBD2B20925500A8D694 /* ManualTestV2.swift in Sources */,
 				534BE60F2B1DF47F00D543AD /* ManualTest.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				534BE6112B1DF4A800D543AD /* ImageComparisonTableCell.swift in Sources */,
