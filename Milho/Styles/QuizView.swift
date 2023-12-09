@@ -16,6 +16,17 @@ struct QuizView: View {
     @State private var currentTab: [String] = ["Default", "Default"]
     
     let questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9]    
+    let ask = [
+                "Como você prefere as estampas nas suas roupas?",
+                "Qual paleta de cores você prefere em suas roupas?",
+                "Como são seus hábitos de consumo de roupas?",
+                "O que você mais procura através da moda?",
+                "Com qual dessas imagens você mais se identifica?",
+                "Como você gastaria 1000 reais em roupas?",
+                "Com base nas palavras abaixo, com quais seus amigos te descreveriam?",
+                "Quais dessas atividades fazem parte do seu dia a dia?",
+                "Como você costuma consumir arte, como música e filmes?"
+                ]
     
     var body: some View {
         VStack {
@@ -27,7 +38,7 @@ struct QuizView: View {
                     .font(.subheadline)
                     .foregroundStyle(Color(.secondaryLabel))
                 
-                Text("Como você prefere as estampas nas suas roupas?")
+                Text(ask[question])
                     .font(.title)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
