@@ -32,9 +32,12 @@
 		A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FF2AF286C4004B25F8 /* TabBarView.swift */; };
 		A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */; };
 		A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */; };
+		A369915A2B21EEC000AD0FA1 /* SingleTextQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36991592B21EEC000AD0FA1 /* SingleTextQuizCell.swift */; };
+		A369915C2B21F3BA00AD0FA1 /* QuizQuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A369915B2B21F3BA00AD0FA1 /* QuizQuestionsModel.swift */; };
+		A369915E2B21F4FE00AD0FA1 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A369915D2B21F4FE00AD0FA1 /* QuestionView.swift */; };
 		A3F150632B18A8DF00F228B7 /* StylesEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150622B18A8DF00F228B7 /* StylesEmptyStateView.swift */; };
 		A3F150652B18AA2400F228B7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150642B18AA2400F228B7 /* QuizView.swift */; };
-		A3F150672B18AAF500F228B7 /* QuizImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150662B18AAF400F228B7 /* QuizImageCell.swift */; };
+		A3F150672B18AAF500F228B7 /* SingleImageQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150662B18AAF400F228B7 /* SingleImageQuizCell.swift */; };
 		A3F150692B18BE2200F228B7 /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F150682B18BE2200F228B7 /* InfoSheetView.swift */; };
 		A3F1506B2B190AAF00F228B7 /* StyleFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1506A2B190AAF00F228B7 /* StyleFeedbackView.swift */; };
 		A3F1506D2B1912E700F228B7 /* StyleResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1506C2B1912E700F228B7 /* StyleResultsView.swift */; };
@@ -71,10 +74,13 @@
 		A31111FF2AF286C4004B25F8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A31112012AF2F566004B25F8 /* PersonalColorTestChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorTestChooserView.swift; sourceTree = "<group>"; };
 		A31112032AF2F642004B25F8 /* PersonalColoringTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringTabItem.swift; sourceTree = "<group>"; };
+		A36991592B21EEC000AD0FA1 /* SingleTextQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextQuizCell.swift; sourceTree = "<group>"; };
+		A369915B2B21F3BA00AD0FA1 /* QuizQuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsModel.swift; sourceTree = "<group>"; };
+		A369915D2B21F4FE00AD0FA1 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		A37DDDC72AF9178100ADE49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A3F150622B18A8DF00F228B7 /* StylesEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylesEmptyStateView.swift; sourceTree = "<group>"; };
 		A3F150642B18AA2400F228B7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
-		A3F150662B18AAF400F228B7 /* QuizImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizImageCell.swift; sourceTree = "<group>"; };
+		A3F150662B18AAF400F228B7 /* SingleImageQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageQuizCell.swift; sourceTree = "<group>"; };
 		A3F150682B18BE2200F228B7 /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
 		A3F1506A2B190AAF00F228B7 /* StyleFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleFeedbackView.swift; sourceTree = "<group>"; };
 		A3F1506C2B1912E700F228B7 /* StyleResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleResultsView.swift; sourceTree = "<group>"; };
@@ -267,7 +273,10 @@
 				A3F150622B18A8DF00F228B7 /* StylesEmptyStateView.swift */,
 				A3F150682B18BE2200F228B7 /* InfoSheetView.swift */,
 				A3F150642B18AA2400F228B7 /* QuizView.swift */,
-				A3F150662B18AAF400F228B7 /* QuizImageCell.swift */,
+				A369915D2B21F4FE00AD0FA1 /* QuestionView.swift */,
+				A369915B2B21F3BA00AD0FA1 /* QuizQuestionsModel.swift */,
+				A3F150662B18AAF400F228B7 /* SingleImageQuizCell.swift */,
+				A36991592B21EEC000AD0FA1 /* SingleTextQuizCell.swift */,
 				A3F1506A2B190AAF00F228B7 /* StyleFeedbackView.swift */,
 				A3F1506C2B1912E700F228B7 /* StyleResultsView.swift */,
 			);
@@ -347,19 +356,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F150672B18AAF500F228B7 /* QuizImageCell.swift in Sources */,
+				A3F150672B18AAF500F228B7 /* SingleImageQuizCell.swift in Sources */,
 				BDC19B742AEAB07D00FA74F7 /* ImageTypeSelection.swift in Sources */,
 				531663E62B1781530032AED1 /* ColorAnalysis.swift in Sources */,
 				531663DC2B177FC50032AED1 /* LoadingResultsView.swift in Sources */,
 				531663E82B17819B0032AED1 /* ColorsGridCell.swift in Sources */,
 				A3F150692B18BE2200F228B7 /* InfoSheetView.swift in Sources */,
 				531663F82B17855C0032AED1 /* FaceImageQuality.swift in Sources */,
+				A369915A2B21EEC000AD0FA1 /* SingleTextQuizCell.swift in Sources */,
 				531663DA2B177F6F0032AED1 /* LoadingItemCell.swift in Sources */,
 				531663D02B177C7E0032AED1 /* ColorExtension.swift in Sources */,
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
 				531663EA2B1781D60032AED1 /* NegativeFeedbackView.swift in Sources */,
+				A369915E2B21F4FE00AD0FA1 /* QuestionView.swift in Sources */,
 				531663F62B1785080032AED1 /* CameraDataModel.swift in Sources */,
 				531663F02B1783640032AED1 /* ResultsView.swift in Sources */,
 				531663E42B1781290032AED1 /* AnalyzingImageView.swift in Sources */,
@@ -370,6 +381,7 @@
 				A3F150652B18AA2400F228B7 /* QuizView.swift in Sources */,
 				533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */,
 				533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */,
+				A369915C2B21F3BA00AD0FA1 /* QuizQuestionsModel.swift in Sources */,
 				BDC19B762AEAB0A100FA74F7 /* ImagePicker.swift in Sources */,
 				531663E22B1780D70032AED1 /* ColorPaletteModel.swift in Sources */,
 				531663D82B177F4D0032AED1 /* LoadingInfoView.swift in Sources */,
