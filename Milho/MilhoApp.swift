@@ -11,6 +11,7 @@ import SwiftUI
 struct MilhoApp: App {
     
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @State var showModal: Bool = false
     
     var body: some Scene {
         
@@ -18,7 +19,16 @@ struct MilhoApp: App {
             if isOnboarding {
                 PersonalColoring()
             } else {
-                ManualTestV2(image: UIImage(named: "eu") ?? UIImage())
+                NavigationStack {
+                    
+                    Text("Mostrar Modal")
+                        .onTapGesture {
+                            showModal = true
+                        }
+                        .sheet(isPresented: $showModal, content: {
+                            ManualTestV2(image: UIImage(named: "eu") ?? UIImage())
+                        })
+                }
                 //TabBar()
             }
             
