@@ -11,7 +11,8 @@ import SwiftUI
 struct MilhoApp: App {
     
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
-    @State var showModal: Bool = false
+    @AppStorage("result") var result: Bool = false
+    @StateObject var redoTest = RedoTest()
     
     var body: some Scene {
         
@@ -19,17 +20,8 @@ struct MilhoApp: App {
             if isOnboarding {
                 PersonalColoring()
             } else {
-                NavigationStack {
-                    
-                    Text("Mostrar Modal")
-                        .onTapGesture {
-                            showModal = true
-                        }
-                        .sheet(isPresented: $showModal, content: {
-                            ManualTestV2(image: UIImage(named: "eu") ?? UIImage())
-                        })
-                }
-                //TabBar()
+                TabBar()
+                    .environmentObject(redoTest)
             }
             
             }

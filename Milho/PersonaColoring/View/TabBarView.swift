@@ -6,12 +6,17 @@
 //
 import SwiftUI
 
+class RedoTest: ObservableObject {
+    @Published var didRedoTest = false
+}
+
 struct TabBar: View {
     
     @State private var selectedTab = 0
     @AppStorage("isOnboarding") var isOnboarding: Bool?
     @AppStorage("result") var result: Bool?
     @AppStorage("paletteNumber") var paletteNumber: Int?
+    @EnvironmentObject var redoTest: RedoTest
     
     var body: some View {
         TabView(selection: $selectedTab,
@@ -65,8 +70,11 @@ struct TabBar: View {
                     
                 }.tag(3)
         })
-        .onChange(of: paletteNumber) { oldValue, newValue in
-            result = true
+        .onChange(of: redoTest.didRedoTest) {
+            if redoTest.didRedoTest == true {
+                result = true
+                redoTest.didRedoTest = false
+            }
         }
     }
 }

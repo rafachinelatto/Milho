@@ -152,9 +152,6 @@ class ImageAnalysisViewModel: ObservableObject {
         let contrast = getContrast(skinColor: skinColor, eyeColor: eyeColor, eyebrowColor: eyebrowColor)
         let skinColorTemperature = getSkinColorTemperature(skinColor: skinColor)
         
-        print(contrast)
-        print(skinColorTemperature)
-        
         switch skinColorTemperature {
         case .none:
             return

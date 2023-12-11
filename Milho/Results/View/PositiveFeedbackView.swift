@@ -12,6 +12,7 @@ struct PositiveFeedbackView: View {
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("paletteNumber") var paletteNumber: Int?
     @AppStorage("result") var result: Bool?
+    @EnvironmentObject var redoTest: RedoTest
     //let rectangles = [1,2,3,4,5,6]
     var paletteNumberResult: Int
     
@@ -61,6 +62,7 @@ struct PositiveFeedbackView: View {
                 Button {
                     
                     self.presentationMode.wrappedValue.dismiss()
+                    redoTest.didRedoTest = true
                     result = false
                     paletteNumber = paletteNumberResult
                     
