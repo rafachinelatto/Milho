@@ -10,6 +10,11 @@ class RedoTest: ObservableObject {
     @Published var didRedoTest = false
 }
 
+class ManualTestModel: ObservableObject {
+    @Published var showManualTest = false
+    @Published var image: UIImage = UIImage()
+}
+
 struct TabBar: View {
     
     @State private var selectedTab = 0

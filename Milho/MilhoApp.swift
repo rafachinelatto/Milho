@@ -13,6 +13,7 @@ struct MilhoApp: App {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
     @AppStorage("result") var result: Bool = false
     @StateObject var redoTest = RedoTest()
+    @StateObject var manualTestModel = ManualTestModel()
     
     var body: some Scene {
         
@@ -22,6 +23,7 @@ struct MilhoApp: App {
             } else {
                 TabBar()
                     .environmentObject(redoTest)
+                    .environmentObject(manualTestModel)
             }
             
             }

@@ -10,6 +10,9 @@ import SwiftUI
 struct PersonalColoringTabItem: View {
     
     @AppStorage("isOnboarding") var isOnboarding: Bool?
+    @EnvironmentObject var manualTestModel: ManualTestModel
+    @State private var paletteNumber: Int = -1
+    @State private var showResults: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -41,6 +44,14 @@ struct PersonalColoringTabItem: View {
             .navigationTitle("Coloração pessoal") //Change font to SF Pro Rounded or Pally
             .navigationBarTitleDisplayMode(.automatic)
             .padding(24)
+            .sheet(isPresented: $manualTestModel.showManualTest, content: {
+                ManualTestV2(paletteNumber: $paletteNumber, showResults: $showResults)
+            })
+            .navigationDestination(isPresented: $showResults) {
+                ManualTestLoadingView(paletteNumber: paletteNumber)
+                    .navigationBarBackButtonHidden()
+                    .toolbar(.hidden, for: .tabBar)
+            }
         }
     }
 }

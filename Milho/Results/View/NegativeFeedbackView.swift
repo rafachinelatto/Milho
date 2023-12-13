@@ -14,7 +14,7 @@ struct NegativeFeedbackView: View {
     
     var body: some View {
         if takePhotoActive {
-            ImageTypeSelection()
+            ImageTypeSelection(isManualTest: false)
         }
         else if tabBarActive {
             TabBar()

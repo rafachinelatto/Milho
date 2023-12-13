@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ManualTestV2: View {
     
-    var image: UIImage
-    
+    @EnvironmentObject var manualTestModel: ManualTestModel
     @Environment(\.dismiss) var dismiss
     
+    
+    @State private var testFaild: Bool = false
     @State private var manualCurrentPage = 0
     @State private var temperature: [Int] =  [0, 0, 0, 0, 0]
     @State private var results: [Int?] = [nil, nil, nil, nil, nil] // Variável que pode estar salvando no user defaults.
@@ -26,7 +27,8 @@ struct ManualTestV2: View {
     var icons = ["flame", "snowflake", "sleep.circle"]
     var names = ["Quente", "Frio", "Neutro"]
     
-    @State var hotSelected: Bool = true
+    @Binding var paletteNumber: Int
+    @Binding var showResults: Bool
     
     var body: some View {
         NavigationStack {
@@ -80,7 +82,7 @@ struct ManualTestV2: View {
                             }
                         }
                         .onAppear {
-                            viewModel.getRect(image: image)
+                            viewModel.getRect(image: manualTestModel.image)
                         }
                         .listRowBackground(Color.clear)
                     }
@@ -141,7 +143,7 @@ struct ManualTestV2: View {
                     Section {
                         HStack {
                             Spacer()
-                            Image(uiImage: image)
+                            Image(uiImage: manualTestModel.image)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(maxHeight: UIScreen.main.bounds.height*0.4)
@@ -177,9 +179,17 @@ struct ManualTestV2: View {
                         Button(action: {
                             
                             if let contrast = viewModel.contrast {
-                                print(getResults(temperatures: self.temperature, contrast: contrast.rawValue, eyeColor: eyeColor, hairColor: hairColor))
+                                let palette = getResults(temperatures: self.temperature, contrast: contrast.rawValue, eyeColor: eyeColor, hairColor: hairColor)
+                                
+                                self.paletteNumber = palette.rawValue
+                                self.showResults = true
+                                
+                                dismiss()
+                                
+                            } else {
+                                self.testFaild = true
+                                dismiss()
                             }
-                            dismiss()
                             
                         }, label: {
                             HStack {
@@ -193,7 +203,6 @@ struct ManualTestV2: View {
                     .listRowBackground(Color.accentColor)
                 }
                 
-                
             }
             .listStyle(.insetGrouped)
             .scrollIndicators(.hidden)
@@ -204,14 +213,13 @@ struct ManualTestV2: View {
                         if self.manualCurrentPage != 0 {
                             self.manualCurrentPage -= 1
                         } else {
-                            dismiss()
+                            manualTestModel.showManualTest = false
                         }
                     }, label: {
                         HStack {
                             Image(systemName: "chevron.left")
                             Text("Voltar")
                         }
-                        
                     })
                 }
             }

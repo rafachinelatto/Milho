@@ -17,7 +17,10 @@ struct AnalyzingImageView: View {
     
     var image: UIImage
     
+    @EnvironmentObject var manualTestModel: ManualTestModel
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModelV2 = ImageAnalysisViewModel()
+    var isManualTest: Bool
     @State var state: LoadingState = .idle
     @State var paletteNumber: Int?
     
@@ -26,14 +29,28 @@ struct AnalyzingImageView: View {
             
             switch state {
             case .idle:
-                Color.clear
-                    .onAppear {
-                        DispatchQueue.main.async {
-                            viewModelV2.getColorPallet(image: image)
-                            paletteNumber = viewModelV2.colorPalette?.rawValue
-                            state = .loading
+                
+                if !isManualTest {
+                    
+                    Color.clear
+                        .onAppear {
+                            DispatchQueue.main.async {
+                                viewModelV2.getColorPallet(image: image)
+                                paletteNumber = viewModelV2.colorPalette?.rawValue
+                                state = .loading
+                            }
                         }
-                    }
+                } else {
+                    TabBar()
+                        .onAppear {
+                            manualTestModel.image = image
+                            manualTestModel.showManualTest = true
+                        }
+                        
+                }
+                
+                
+                
             case .loading:
                 LoadingResultsView()
                     .onAppear {
@@ -75,5 +92,5 @@ struct AnalyzingImageView: View {
 }
 
 #Preview {
-    AnalyzingImageView(image: UIImage())
+    AnalyzingImageView(image: UIImage(), isManualTest: false)
 }

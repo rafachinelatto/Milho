@@ -28,6 +28,7 @@
 		531663FE2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531663FD2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift */; };
 		533B12E02AE694ED00485B67 /* ImageSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */; };
 		533B12E32AE6968200485B67 /* UIimage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B12E22AE6968200485B67 /* UIimage+extension.swift */; };
+		5340BDA62B2807BC00AF8AAC /* ManualTestLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5340BDA52B2807BC00AF8AAC /* ManualTestLoadingView.swift */; };
 		534BE60B2B1DF44300D543AD /* ColorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE60A2B1DF44300D543AD /* ColorsData.swift */; };
 		534BE60D2B1DF46500D543AD /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE60C2B1DF46500D543AD /* CheckboxStyle.swift */; };
 		534BE60F2B1DF47F00D543AD /* ManualTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534BE60E2B1DF47F00D543AD /* ManualTest.swift */; };
@@ -72,6 +73,7 @@
 		531663FD2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalysisViewModel.swift; sourceTree = "<group>"; };
 		533B12DF2AE694ED00485B67 /* ImageSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSegmentation.swift; sourceTree = "<group>"; };
 		533B12E22AE6968200485B67 /* UIimage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+extension.swift"; sourceTree = "<group>"; };
+		5340BDA52B2807BC00AF8AAC /* ManualTestLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTestLoadingView.swift; sourceTree = "<group>"; };
 		534BE60A2B1DF44300D543AD /* ColorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsData.swift; sourceTree = "<group>"; };
 		534BE60C2B1DF46500D543AD /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		534BE60E2B1DF47F00D543AD /* ManualTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTest.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				539A1FBC2B20925500A8D694 /* ManualTestV2.swift */,
 				539A1FC02B209D2500A8D694 /* ImageComparisonTableCellV2.swift */,
 				530C23002B21F0E600AA9F65 /* TemperatureSelectionView.swift */,
+				5340BDA52B2807BC00AF8AAC /* ManualTestLoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				531663D02B177C7E0032AED1 /* ColorExtension.swift in Sources */,
 				A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */,
 				530C23012B21F0E600AA9F65 /* TemperatureSelectionView.swift in Sources */,
+				5340BDA62B2807BC00AF8AAC /* ManualTestLoadingView.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
 				539A1FBD2B20925500A8D694 /* ManualTestV2.swift in Sources */,
 				534BE60F2B1DF47F00D543AD /* ManualTest.swift in Sources */,

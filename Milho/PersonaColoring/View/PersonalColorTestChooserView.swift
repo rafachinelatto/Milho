@@ -16,7 +16,7 @@ struct PersonalColorTestChooserView: View {
         VStack (spacing: 48){
             
             NavigationLink {
-                ImageTypeSelection()
+                ImageTypeSelection(isManualTest: false)
             } label: {
                 ZStack {
                     RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
@@ -50,7 +50,7 @@ struct PersonalColorTestChooserView: View {
             }
             
             NavigationLink {
-                ImageTypeSelection()
+                ImageTypeSelection(isManualTest: true)
             } label: {
                 ZStack {
                     RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
@@ -95,6 +95,6 @@ struct PersonalColorTestChooserView: View {
 }
 
 
-#Preview {
-    PersonalColorTestChooserView()
-}
+//#Preview {
+//    PersonalColorTestChooserView(showManualTest: .constant(false))
+//}

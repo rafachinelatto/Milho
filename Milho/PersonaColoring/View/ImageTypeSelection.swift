@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ImageTypeSelection: View {
 
+    var isManualTest: Bool
+
     @State var imageWasSelected = false
     @State var imageSelected: UIImage?
     @State var showImagePicker: Bool = false
@@ -48,7 +50,7 @@ struct ImageTypeSelection: View {
             }
             .navigationDestination(isPresented: $imageWasSelected) {
                 if let image = imageSelected {
-                    AnalyzingImageView(image: image)
+                    AnalyzingImageView(image: image, isManualTest: isManualTest)
                         .navigationBarBackButtonHidden()
                         .toolbar(.hidden, for: .tabBar)
                 }
@@ -68,5 +70,5 @@ struct ImageTypeSelection: View {
 }
 
 #Preview {
-    ImageTypeSelection()
+    ImageTypeSelection(isManualTest: false)
 }

@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ResultsView: View {
     
+    @EnvironmentObject var manualTestModel: ManualTestModel
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("result") var result: Bool?
     @State private var redoTest = false
     @State var paletteNumber: Int
+    @State var paletteNumberManualTest: Int = -1
+    @State var showResults: Bool = false
     
     var body: some View {
         
@@ -52,6 +55,15 @@ struct ResultsView: View {
                 .navigationDestination(isPresented: $redoTest) {
                     PersonalColorTestChooserView()
                 }
+                .sheet(isPresented: $manualTestModel.showManualTest, content: {
+                    ManualTestV2(paletteNumber: $paletteNumberManualTest, showResults: $showResults)
+                })
+                .navigationDestination(isPresented: $showResults) {
+                    ManualTestLoadingView(paletteNumber: paletteNumberManualTest)
+                        .navigationBarBackButtonHidden()
+                        .toolbar(.hidden, for: .tabBar)
+                }
+            
                 //Spacer()
         }
 //        }
