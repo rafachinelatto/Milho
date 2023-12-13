@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultsView: View {
     
+    var shareResultsModel = ShareResultsModel()
     @EnvironmentObject var manualTestModel: ManualTestModel
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("result") var result: Bool?
@@ -16,6 +17,7 @@ struct ResultsView: View {
     @State var paletteNumber: Int
     @State var paletteNumberManualTest: Int = -1
     @State var showResults: Bool = false
+    @State var shareImage: UIImage = UIImage()
     
     var body: some View {
         
@@ -63,6 +65,22 @@ struct ResultsView: View {
                         .navigationBarBackButtonHidden()
                         .toolbar(.hidden, for: .tabBar)
                 }
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        ShareLink(item: PNG(shareImage.pngData() ?? Data()), preview: SharePreview("Minha paleta de cores", image: Image(uiImage: shareImage))) {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                        
+                    }
+                }
+                .onAppear {
+                    DispatchQueue.main.async {
+                        self.shareImage = self.shareResultsModel.shareImage(paletteNumberResult: paletteNumber)
+    
+                        
+                    }
+                }
+            
             
                 //Spacer()
         }
@@ -71,6 +89,6 @@ struct ResultsView: View {
     }
 }
 
-#Preview {
-    ResultsView(paletteNumber: 11)
-}
+//#Preview {
+    //ResultsView(paletteNumber: 11)
+//}

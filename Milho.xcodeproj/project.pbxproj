@@ -38,6 +38,8 @@
 		539A1FBD2B20925500A8D694 /* ManualTestV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1FBC2B20925500A8D694 /* ManualTestV2.swift */; };
 		539A1FBF2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1FBE2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift */; };
 		539A1FC12B209D2500A8D694 /* ImageComparisonTableCellV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A1FC02B209D2500A8D694 /* ImageComparisonTableCellV2.swift */; };
+		539D181C2B29DC8E00CC558B /* ShareResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D181B2B29DC8E00CC558B /* ShareResultsModel.swift */; };
+		539D181E2B29E30000CC558B /* PNGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D181D2B29E30000CC558B /* PNGExtension.swift */; };
 		A31111FA2AF27CD1004B25F8 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111F92AF27CD1004B25F8 /* OnboardingData.swift */; };
 		A31111FC2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */; };
 		A31111FE2AF283D8004B25F8 /* PersonalColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */; };
@@ -83,6 +85,8 @@
 		539A1FBC2B20925500A8D694 /* ManualTestV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTestV2.swift; sourceTree = "<group>"; };
 		539A1FBE2B2094DA00A8D694 /* ImageComparisonTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCellViewModel.swift; sourceTree = "<group>"; };
 		539A1FC02B209D2500A8D694 /* ImageComparisonTableCellV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComparisonTableCellV2.swift; sourceTree = "<group>"; };
+		539D181B2B29DC8E00CC558B /* ShareResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareResultsModel.swift; sourceTree = "<group>"; };
+		539D181D2B29E30000CC558B /* PNGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExtension.swift; sourceTree = "<group>"; };
 		A31111F92AF27CD1004B25F8 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		A31111FB2AF2833A004B25F8 /* PersonalColoringOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringOnboardingView.swift; sourceTree = "<group>"; };
 		A31111FD2AF283D8004B25F8 /* PersonalColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColoringView.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 			children = (
 				531663E52B1781530032AED1 /* ColorAnalysis.swift */,
 				531663FD2B18A7EA0032AED1 /* ImageAnalysisViewModel.swift */,
+				539D181B2B29DC8E00CC558B /* ShareResultsModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			children = (
 				533B12E22AE6968200485B67 /* UIimage+extension.swift */,
 				531663CF2B177C7E0032AED1 /* ColorExtension.swift */,
+				539D181D2B29E30000CC558B /* PNGExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				530C23012B21F0E600AA9F65 /* TemperatureSelectionView.swift in Sources */,
 				5340BDA62B2807BC00AF8AAC /* ManualTestLoadingView.swift in Sources */,
 				A31112002AF286C4004B25F8 /* TabBarView.swift in Sources */,
+				539D181E2B29E30000CC558B /* PNGExtension.swift in Sources */,
 				539A1FBD2B20925500A8D694 /* ManualTestV2.swift in Sources */,
 				534BE60F2B1DF47F00D543AD /* ManualTest.swift in Sources */,
 				BDC19B6E2AEAAFE200FA74F7 /* ImageTypeViewModel.swift in Sources */,
@@ -444,6 +451,7 @@
 				A31112022AF2F566004B25F8 /* PersonalColorTestChooserView.swift in Sources */,
 				530986DD2ACC40C20068D4A2 /* MilhoApp.swift in Sources */,
 				531663EE2B1783280032AED1 /* ResultsListView.swift in Sources */,
+				539D181C2B29DC8E00CC558B /* ShareResultsModel.swift in Sources */,
 				A31112042AF2F642004B25F8 /* PersonalColoringTabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
