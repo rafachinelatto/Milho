@@ -17,7 +17,8 @@ struct MilhoApp: App {
             if isOnboarding {
                 PersonalColoring()
             } else {
-                TabBar()
+//                TabBar()
+                StylesEmptyStateView()
             }
             
             }

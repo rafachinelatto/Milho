@@ -53,7 +53,7 @@ struct TabBar: View {
                 .tabItem {
                     
                     Text("Estilos")
-                    Image(systemName: "rectangle.fill.badge.person.crop")
+                    Image(systemName: "sunglasses")
                     
                 }.tag(2)
             

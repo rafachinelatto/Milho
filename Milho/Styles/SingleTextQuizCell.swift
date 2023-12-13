@@ -46,20 +46,26 @@ struct SingleTextQuizCell: View {
             else {
                 VStack {
                    
-                    Text(desc)
-                        .font(.system(size: 16))
-                        .fontWeight(.medium)
+                    HStack {
+                        Text(desc)
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                        Spacer()
+                    }
                     
                     Spacer()
                     
                 }
+                .padding(8)
+                
+                .frame(width: UIScreen.main.bounds.width/3.5, height: UIScreen.main.bounds.height/6)
                 .overlay (
                     RoundedRectangle(cornerRadius: 12)
                         .stroke(Color.accentColor, lineWidth: 2)
                 )
                 .background(.white)
                 .mask(RoundedRectangle(cornerRadius: 12))
-                .padding(24)
+                
             }
             
         })

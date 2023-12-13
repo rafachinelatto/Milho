@@ -32,7 +32,10 @@ struct InfoSheetView: View {
                     Spacer()
                 }
             }
-            Text("Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.")
+            Text("""
+                 "Os sete estilos universais são um conceito criado pela estilista Alyce Parsons, que os define como sendo a base para todos os outros estilos que existem. Embora com o tempo tenham sofrido adaptações e mudanças de interpretação, continuam sendo uma ferramenta útil para ajudar as pessoas a entenderem como elas se expressam e como podem explorar ainda mais a moda.
+                 Há três estilos principais: casual, tradicional e contemporâneo.  E há também quatro estilos complementares: dramático, romântico, sensual e criativo. Cada pessoa normalmente costuma combinar características de dois ou três desses estilos.
+                """)
                 .foregroundStyle(.secondary)
             Spacer()
         }

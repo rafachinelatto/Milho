@@ -23,7 +23,7 @@ struct StyleFeedbackView: View {
                     Text("Agora você está no estilo! E ele é predominantemente")
                         .multilineTextAlignment(.center)
                     //Spacer()
-                    Text(style[5])
+                    Text(style[2])
                         .font(.largeTitle)
                         .fontWeight(.semibold)
                 }
@@ -32,6 +32,7 @@ struct StyleFeedbackView: View {
                 
                 NavigationLink {
                     StyleResultsView()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Ver mais detalhes")
                         .frame(maxWidth: .infinity)

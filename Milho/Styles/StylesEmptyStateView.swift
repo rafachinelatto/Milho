@@ -26,7 +26,7 @@ struct StylesEmptyStateView: View {
                     NavigationLink {
                         QuizView()
                     } label: {
-                        Text("Começar o questionário")
+                        Text("Começar")
                             .frame(height: UIScreen.main.bounds.height/21)
                             .frame(maxWidth: .infinity)
                     }
@@ -46,7 +46,7 @@ struct StylesEmptyStateView: View {
                 .padding()
                 .sheet(isPresented: $showingSheet, content: {
                     InfoSheetView()
-                        .presentationDetents([.medium])
+                        .presentationDetents([.large])
                 })
             }
         }
